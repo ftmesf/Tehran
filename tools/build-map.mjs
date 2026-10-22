@@ -9,6 +9,8 @@ const nodes = load('nodes');
 const segments = load('segments');
 const landmarks = load('landmarks');
 const nodeById = new Map(nodes.map(n => [n.id, n]));
+const allRows = [...highways, ...nodes, ...segments, ...landmarks];
+const verifiedCount = allRows.filter(r => r.verified).length;
 
 const W = 1600, H = 1400, MOUNTAIN_BASE = 250;
 
@@ -20,9 +22,9 @@ const LATIN = 'U+0000-00FF,U+2000-206F';
 
 // Label pill placement per highway: [x, y] centre. Chosen by eye to sit at a line end without overlaps.
 const LABEL_AT = {
-  kordestan: [680, 892], modares: [860, 932], sayyad: [1200, 912], navvab: [500, 1102], imam_ali: [1340, 290],
-  niayesh: [100, 440], hemmat: [205, 512], zeinoddin: [1460, 560], resalat: [1528, 740], sadr: [960, 392],
-  babaei: [1528, 440], hakim: [215, 785], chamran: [640, 298], yadegar: [400, 298], azadegan: [760, 1222]
+  kordestan: [680, 892], modares: [860, 932], sayyad: [1220, 972], navvab: [500, 1112], imam_ali: [1340, 1056],
+  niayesh: [100, 440], hemmat: [205, 512], zeinoddin: [1514, 560], resalat: [1500, 740], sadr: [1030, 392],
+  babaei: [1500, 440], hakim: [215, 785], chamran: [640, 298], yadegar: [400, 298], azadegan: [560, 1202]
 };
 // Where the label sits relative to a landmark badge.
 const LANDMARK_LABEL = { tajrish: 'right', milad: 'below', azadi: 'below', rahahan: 'right' };
@@ -99,11 +101,7 @@ function highwayLayers() {
     for (const s of segs.filter(s => s.kind === 'tunnel'))
       tunnels.push(`<path d="${pathFor([s.from_node, s.to_node])}" class="tunnel"/>`);
   }
-  // Unknown continuation of Imam Ali south of Resalat: drawn as a fading question, not as a road.
-  const z = nodeById.get('n_res_imam');
-  const stub = `<path d="M${z.x} ${z.y + 14} L${z.x} ${z.y + 90}" class="unknown-stub"/>
-    <circle cx="${z.x}" cy="${z.y + 112}" r="17" class="unknown-badge"/><text x="${z.x}" y="${z.y + 121}" class="unknown-q" text-anchor="middle">؟</text>`;
-  return `<g id="highways">${casings.join('')}${outlines.join('')}${cores.join('')}${tunnels.join('')}${stub}</g>`;
+  return `<g id="highways">${casings.join('')}${outlines.join('')}${cores.join('')}${tunnels.join('')}</g>`;
 }
 
 function nodeLayer() {
@@ -116,7 +114,7 @@ function nodeLayer() {
 function highwayLabels() {
   return `<g id="highway-labels">` + highways.map(h => {
     const [x, y] = LABEL_AT[h.id];
-    const w = Math.max(100, [...h.name_fa].length * 14 + 40, h.name_en.length * 7 + 28);
+    const w = Math.max(100, [...h.name_fa].length * 12 + 44, h.name_en.length * 7 + 28);
     const special = h.orientation === 'MIXED' || h.orientation === 'DIAGONAL';
     return `<g class="hw-label" data-highway="${h.id}">
       <rect x="${x - w / 2}" y="${y - 30}" width="${w}" height="60" rx="30" fill="${h.color}" class="pill ${special ? 'pill-special' : ''}"/>
@@ -182,9 +180,9 @@ function legend() {
     ${row(1262, '', '#1565C0', 'آبی = عمودی (شمال ↕ جنوب)', 'blue = vertical, north–south')}
     ${row(1308, '', '#EF6C00', 'نارنجی = افقی (غرب ↔ شرق)', 'orange = horizontal, west–east')}
     ${row(1354, 'special', '#7B1FA2', 'بنفش خط‌چین = استثنا (پیچ‌دار)', 'purple dashed = edge case, changes direction')}
-    <rect x="600" y="1330" width="400" height="54" rx="12" class="draft"/>
-    <text x="800" y="1355" class="draft-fa" text-anchor="middle" direction="rtl">پیش‌نویس — داده‌ها هنوز تأیید نشده‌اند</text>
-    <text x="800" y="1375" class="draft-en" text-anchor="middle">DRAFT · every row is verified:false · see REVIEW.md</text>
+    <rect x="590" y="1326" width="470" height="58" rx="12" class="draft"/>
+    <text x="825" y="1352" class="draft-fa" text-anchor="middle" direction="rtl">داده‌ها از OpenStreetMap — ${verifiedCount} از ${allRows.length} ردیف تأییدشده</text>
+    <text x="825" y="1373" class="draft-en" text-anchor="middle">© OpenStreetMap contributors (ODbL) · ${verifiedCount}/${allRows.length} rows verified</text>
   </g>`;
 }
 
@@ -212,9 +210,7 @@ const style = `
   .core{fill:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
   .core-special{stroke-width:14}
   .tunnel{fill:none;stroke:var(--casing);stroke-width:6;stroke-dasharray:10 10}
-  .unknown-stub{fill:none;stroke:#0277BD;stroke-opacity:.55;stroke-width:10;stroke-dasharray:4 14;stroke-linecap:round}
-  .unknown-badge{fill:var(--badge);stroke:#0277BD;stroke-width:3}.unknown-q{font-size:24px;font-weight:800;fill:#0277BD}
-  .node{fill:var(--node);stroke:#17202b;stroke-width:4}
+    .node{fill:var(--node);stroke:#17202b;stroke-width:4}
   .node-endpoint{stroke-width:3}
   .pill{stroke:var(--casing);stroke-width:4}.pill-special{stroke:var(--special-dash);stroke-dasharray:10 6}
   .pill-fa{font-size:26px;font-weight:800;fill:#ffffff}.pill-en{font-size:13px;font-weight:400;fill:#ffffff;fill-opacity:.92}
@@ -242,7 +238,7 @@ ${highwayLayers()}
 ${nodeLayer()}
 ${landmarkLayer()}
 ${highwayLabels()}
-${compass(1440, 1262)}
+${compass(1450, 1258)}
 ${legend()}
 </svg>
 `;

@@ -1,5 +1,5 @@
 {
-  "_about": "One row per highway. orientation: NS | EW | DIAGONAL | MIXED. level = lesson that introduces it. All rows verified:false until checked against a real map (see REVIEW.md).",
+  "_about": "One row per highway. orientation: NS | EW | DIAGONAL | MIXED. verified = the real OSM extents fit the declared orientation.",
   "rows": [
     {
       "id": "kordestan",
@@ -8,12 +8,15 @@
       "orientation": "NS",
       "color": "#1565C0",
       "level": 1,
-      "verified": false,
+      "verified": true,
       "source": [
-        "wp_kordestan",
-        "fa_wikifeqh_kordestan"
+        "osm_overture"
       ],
-      "note": "fa.wikifeqh: links to Hemmat and Hakim only via U-turns. North extension to Chamran is under construction (not drawn)."
+      "osm": {
+        "ew_extent_km": 1.3,
+        "ns_extent_km": 5.5,
+        "way_count": 23
+      }
     },
     {
       "id": "modares",
@@ -22,11 +25,16 @@
       "orientation": "NS",
       "color": "#0D47A1",
       "level": 1,
-      "verified": false,
+      "name_en_alt": "Modarres",
+      "verified": true,
       "source": [
-        "wp_modarres"
+        "osm_overture"
       ],
-      "name_en_alt": "Modarres"
+      "osm": {
+        "ew_extent_km": 0.8,
+        "ns_extent_km": 7.9,
+        "way_count": 13
+      }
     },
     {
       "id": "sayyad",
@@ -35,10 +43,16 @@
       "orientation": "NS",
       "color": "#1E88E5",
       "level": 1,
-      "verified": false,
+      "note": "Leans north-east (NNE); still reads as a vertical line.",
+      "verified": true,
       "source": [
-        "wp_sayyad"
-      ]
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 5,
+        "ns_extent_km": 10.4,
+        "way_count": 37
+      }
     },
     {
       "id": "navvab",
@@ -47,12 +61,16 @@
       "orientation": "NS",
       "color": "#2E7DD7",
       "level": 2,
-      "verified": false,
+      "note": "Continuation of Chamran south of the Tohid Tunnel.",
+      "verified": true,
       "source": [
-        "wp_navvab",
-        "wikidata_tohid"
+        "osm_overture"
       ],
-      "note": "Continuation of Chamran south of Tohid Tunnel."
+      "osm": {
+        "ew_extent_km": 0.4,
+        "ns_extent_km": 4.4,
+        "way_count": 28
+      }
     },
     {
       "id": "imam_ali",
@@ -61,13 +79,16 @@
       "orientation": "NS",
       "color": "#0277BD",
       "level": 2,
-      "verified": false,
+      "note": "Drawn from its north end to its south end in OSM (~23 km north-south).",
+      "verified": true,
       "source": [
-        "wp_imam_ali",
-        "wp_babayi",
-        "wp_zeinoddin"
+        "osm_overture"
       ],
-      "note": "Drawn down to Resalat only. One unattributed Persian summary says it goes on to cross Mahallati, Besat and Azadegan toward Shahr-e Rey; not drawn until a source is named."
+      "osm": {
+        "ew_extent_km": 4.1,
+        "ns_extent_km": 23.4,
+        "way_count": 64
+      }
     },
     {
       "id": "niayesh",
@@ -76,12 +97,18 @@
       "orientation": "EW",
       "color": "#D84315",
       "level": 1,
-      "verified": false,
-      "source": [
-        "wp_niayesh"
-      ],
       "official_name_fa": "آیت‌الله هاشمی رفسنجانی",
-      "official_name_en": "Hashemi Rafsanjani Expressway"
+      "official_name_en": "Hashemi Rafsanjani Expressway",
+      "note": "OSM name is the official one. Reaches Sadr through a tunnel (~1.5 km gap in OSM).",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 6.8,
+        "ns_extent_km": 0.9,
+        "way_count": 27
+      }
     },
     {
       "id": "hemmat",
@@ -90,12 +117,16 @@
       "orientation": "EW",
       "color": "#EF6C00",
       "level": 1,
-      "verified": false,
+      "note": "Becomes Zeinoddin at the Sayyad Shirazi junction.",
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "fa_wikifeqh_hemmat",
-        "hamshahri_hemmat_exits"
-      ]
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 18.2,
+        "ns_extent_km": 0.9,
+        "way_count": 107
+      }
     },
     {
       "id": "resalat",
@@ -104,12 +135,18 @@
       "orientation": "EW",
       "color": "#F59E0B",
       "level": 1,
-      "verified": false,
-      "source": [
-        "wp_resalat"
-      ],
       "official_name_fa": "سپهبد قاسم سلیمانی",
-      "official_name_en": "Qasem Soleimani Expressway"
+      "official_name_en": "Qasem Soleimani Expressway",
+      "note": "OSM names it Soleimani. Starts where Hakim ends.",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 12.2,
+        "ns_extent_km": 2.4,
+        "way_count": 92
+      }
     },
     {
       "id": "sadr",
@@ -118,11 +155,15 @@
       "orientation": "EW",
       "color": "#E64A19",
       "level": 2,
-      "verified": false,
+      "verified": true,
       "source": [
-        "wp_sadr",
-        "abadis_sadr"
-      ]
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 6.4,
+        "ns_extent_km": 2,
+        "way_count": 47
+      }
     },
     {
       "id": "babaei",
@@ -131,11 +172,16 @@
       "orientation": "EW",
       "color": "#BF360C",
       "level": 2,
-      "verified": false,
+      "name_en_alt": "Babayi",
+      "verified": true,
       "source": [
-        "wp_babayi"
+        "osm_overture"
       ],
-      "name_en_alt": "Babayi"
+      "osm": {
+        "ew_extent_km": 13.2,
+        "ns_extent_km": 6.6,
+        "way_count": 49
+      }
     },
     {
       "id": "zeinoddin",
@@ -144,12 +190,16 @@
       "orientation": "EW",
       "color": "#F57C00",
       "level": 2,
-      "verified": false,
+      "note": "Continuation of Hemmat east of Sayyad Shirazi.",
+      "verified": true,
       "source": [
-        "wp_zeinoddin",
-        "wp_hemmat"
+        "osm_overture"
       ],
-      "note": "Continuation of Hemmat east of Pasdaran. Not in the original candidate list."
+      "osm": {
+        "ew_extent_km": 11.5,
+        "ns_extent_km": 4.1,
+        "way_count": 44
+      }
     },
     {
       "id": "hakim",
@@ -158,10 +208,15 @@
       "orientation": "EW",
       "color": "#FB8C00",
       "level": 2,
-      "verified": false,
+      "verified": true,
       "source": [
-        "wp_hakim"
-      ]
+        "osm_overture"
+      ],
+      "osm": {
+        "ew_extent_km": 8.9,
+        "ns_extent_km": 1.3,
+        "way_count": 40
+      }
     },
     {
       "id": "chamran",
@@ -170,12 +225,16 @@
       "orientation": "MIXED",
       "color": "#7B1FA2",
       "level": 3,
-      "verified": false,
+      "note": "North-south, but its top turns west-east over to Parkway, so Chamran + Modares make an upside-down U.",
+      "verified": true,
       "source": [
-        "wp_chamran",
-        "fa_wikifeqh_parkway"
+        "osm_overture"
       ],
-      "note": "Mostly north-south, but its north end turns west-east to Parkway."
+      "osm": {
+        "ew_extent_km": 3.2,
+        "ns_extent_km": 9.7,
+        "way_count": 46
+      }
     },
     {
       "id": "yadegar",
@@ -184,25 +243,34 @@
       "orientation": "MIXED",
       "color": "#9C27B0",
       "level": 3,
-      "verified": false,
+      "note": "West-east at the top, then north-south.",
+      "verified": true,
       "source": [
-        "wp_yadegar",
-        "fa_wikifeqh_yadegar"
+        "osm_overture"
       ],
-      "note": "West-east section at the top, then north-south."
+      "osm": {
+        "ew_extent_km": 4.4,
+        "ns_extent_km": 11.9,
+        "way_count": 61
+      }
     },
     {
       "id": "azadegan",
       "name_fa": "آزادگان",
       "name_en": "Azadegan",
-      "orientation": "MIXED",
+      "orientation": "DIAGONAL",
       "color": "#6A1B9A",
       "level": 3,
-      "verified": false,
+      "note": "Runs north-west to south-east as an arc along the south of the city. In OSM it does not touch any of the other 14 highways.",
+      "verified": true,
       "source": [
-        "wp_azadegan"
+        "osm_overture"
       ],
-      "note": "Ring road: west side runs north-south, south side runs west-east. Ends are NW and SE."
+      "osm": {
+        "ew_extent_km": 17.6,
+        "ns_extent_km": 8.4,
+        "way_count": 45
+      }
     }
   ]
 }

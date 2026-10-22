@@ -2,32 +2,41 @@
 
 A small learning app that teaches Tehran's highway network as a **graph with fixed positions**. North is always up, and the Alborz mountains are always at the top.
 
-**Status: Phase 1 (data only).** Every data row is `verified: false` until the checklist in [`REVIEW.md`](REVIEW.md) is done.
+**Status: Phase 1 (data only).** The data is derived from OpenStreetMap; 109 of 116 rows are `verified: true`. What is still open is in [`REVIEW.md`](REVIEW.md).
 
 ## What is here
 
 | Path | What it is |
 |---|---|
-| `data/highways.json` | One row per highway: `orientation` (NS / EW / DIAGONAL / MIXED), color, level |
-| `data/nodes.json` | Interchanges, line ends, squares, landmarks, plus hidden bend `waypoint`s. `x,y` = schematic position |
+| `data/highways.json` | One row per highway: `orientation` (NS / EW / DIAGONAL / MIXED), colour, level, real extents |
+| `data/nodes.json` | Interchanges, line ends, squares, landmarks, bends. `x,y` = schematic position, `lat,lon` + `osm` = the OSM evidence |
 | `data/segments.json` | Edges: `from_node → to_node`, compass `direction`, `order_on_highway` |
 | `data/landmarks.json` | The 4 Level-0 anchors (Tajrish, Milad, Azadi, Rah-Ahan) |
 | `data/sources.json` | Where each fact came from |
-| `map/schematic.svg` | The static schematic map (follows the light/dark theme) |
-| `map/schematic-full.png`, `map/schematic-25pct.png`, `map/schematic-full-dark.png` | Squint-test exports |
-| `REVIEW.md` | One question per fact, to check against a real map |
+| `data/osm/summary.json` | Junctions, name changes, line ends and landmark checks derived from OSM |
+| `data/osm/highways.geojson` | The real carriageways of the 15 highways with OSM way ids (for the optional real-map view) |
+| `map/schematic.svg` | The static schematic map (follows light/dark theme) |
+| `map/schematic-full.png`, `-25pct.png`, `-full-dark.png` | Squint-test exports |
 
 ## Commands
 
-Needs Node 18+. The PNG step also needs Playwright with Chromium.
+Node 18+ for everything except re-downloading. Python 3 with `pip install -r requirements.txt` is only needed for the first two.
 
 ```sh
-npm run validate    # integrity checks: references, 0/45/90° lines, directions, chain order, landmark order
-npm run build:map   # data/*.json -> map/schematic.svg
-npm run render      # map/schematic.svg -> PNGs
-npm run phase1      # all three
+npm run fetch:osm    # download Tehran road segments from the Overture/OSM bucket (~1 min, ~24 MB, writes data/raw/)
+npm run derive:osm   # raw segments -> data/osm/summary.json + highways.geojson
+npm run build:data   # summary.json + schematic layout -> data/*.json
+npm run validate     # integrity + "the drawing never contradicts the real coordinates"
+npm run build:map    # data -> map/schematic.svg
+npm run render       # svg -> PNGs (needs Playwright + Chromium)
+npm run build        # data, validate, map, render
 ```
 
-Tech choice: plain HTML + SVG + JS, with no framework or build step. The data is small and static, and the map is hand-placed SVG, so React would add weight without helping.
+The committed `data/osm/` files are enough to run everything from `build:data` onward.
 
-The font is Vazirmatn (SIL Open Font License, see `assets/fonts/OFL-LICENSE.txt`). It is embedded in the SVG, so Persian renders the same everywhere.
+Tech choice: plain HTML + SVG + JS, with no framework or build step. The data is small and static, and the map is hand-placed SVG.
+
+## Data and licence
+
+Geography © OpenStreetMap contributors, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/). It was fetched through Overture Maps' transportation segments because `overpass-api.de` was not reachable from the build environment. Keep the credit visible in the app.
+The font is Vazirmatn (SIL OFL, see `assets/fonts/OFL-LICENSE.txt`), embedded in the SVG.

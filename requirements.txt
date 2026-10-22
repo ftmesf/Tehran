@@ -1,0 +1,4 @@
+# Only needed to re-download / re-derive the OSM data (npm run fetch:osm, derive:osm). The app itself needs no Python.
+pyarrow
+requests
+shapely

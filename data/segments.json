@@ -1,5 +1,5 @@
 {
-  "_about": "Edges. direction = compass direction from from_node to to_node on the schematic. NS highways listed north->south, EW west->east.",
+  "_about": "Edges. direction = compass direction on the schematic from from_node to to_node. verified = both ends from OSM and no coordinate runs against the drawing.",
   "rows": [
     {
       "id": "s_kordestan_1",
@@ -9,7 +9,10 @@
       "direction": "S",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_kordestan_2",
@@ -19,7 +22,10 @@
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_kordestan_3",
@@ -29,7 +35,10 @@
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_modares_1",
@@ -39,7 +48,10 @@
       "direction": "S",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_modares_2",
@@ -49,7 +61,10 @@
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_modares_3",
@@ -59,7 +74,10 @@
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_modares_4",
@@ -69,37 +87,62 @@
       "direction": "S",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_sayyad_1",
       "highway_id": "sayyad",
-      "from_node": "n_bab_say",
-      "to_node": "n_zei_say",
-      "direction": "S",
+      "from_node": "n_say_imam",
+      "to_node": "n_sadr_say",
+      "direction": "SW",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_sayyad_2",
       "highway_id": "sayyad",
-      "from_node": "n_zei_say",
-      "to_node": "n_sayyad_ic",
+      "from_node": "n_sadr_say",
+      "to_node": "n_hem_say",
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_sayyad_3",
       "highway_id": "sayyad",
-      "from_node": "n_sayyad_ic",
-      "to_node": "n_sepah",
+      "from_node": "n_hem_say",
+      "to_node": "n_sayyad_ic",
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "s_sayyad_4",
+      "highway_id": "sayyad",
+      "from_node": "n_sayyad_ic",
+      "to_node": "n_sepah",
+      "direction": "S",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_navvab_1",
@@ -109,37 +152,75 @@
       "direction": "S",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_imam_ali_1",
       "highway_id": "imam_ali",
       "from_node": "n_artesh",
-      "to_node": "n_bab_imam",
+      "to_node": "n_say_imam",
       "direction": "S",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_imam_ali_2",
       "highway_id": "imam_ali",
-      "from_node": "n_bab_imam",
-      "to_node": "n_zei_imam",
+      "from_node": "n_say_imam",
+      "to_node": "n_imam_sadr_bab",
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_imam_ali_3",
       "highway_id": "imam_ali",
-      "from_node": "n_zei_imam",
-      "to_node": "n_res_imam",
+      "from_node": "n_imam_sadr_bab",
+      "to_node": "n_zei_imam",
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "s_imam_ali_4",
+      "highway_id": "imam_ali",
+      "from_node": "n_zei_imam",
+      "to_node": "n_res_imam",
+      "direction": "S",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "s_imam_ali_5",
+      "highway_id": "imam_ali",
+      "from_node": "n_res_imam",
+      "to_node": "n_imam_s",
+      "direction": "S",
+      "order_on_highway": 5,
+      "kind": "road",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_niayesh_1",
@@ -149,7 +230,10 @@
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_niayesh_2",
@@ -159,7 +243,10 @@
       "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_niayesh_3",
@@ -169,7 +256,10 @@
       "direction": "E",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_niayesh_4",
@@ -179,7 +269,10 @@
       "direction": "E",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_niayesh_5",
@@ -189,8 +282,11 @@
       "direction": "E",
       "order_on_highway": 5,
       "kind": "tunnel",
-      "verified": false,
-      "note": "Tunnel linking Niayesh east end to Sadr."
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ],
+      "note": "Tunnel linking Niayesh east end to Sadr (~1.5 km gap in OSM)."
     },
     {
       "id": "s_hemmat_1",
@@ -200,7 +296,10 @@
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hemmat_2",
@@ -210,7 +309,10 @@
       "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hemmat_3",
@@ -220,7 +322,10 @@
       "direction": "E",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hemmat_4",
@@ -230,17 +335,23 @@
       "direction": "E",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hemmat_5",
       "highway_id": "hemmat",
       "from_node": "n_fajr",
-      "to_node": "n_pas_h",
+      "to_node": "n_hem_say",
       "direction": "E",
       "order_on_highway": 5,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_resalat_1",
@@ -250,7 +361,10 @@
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_resalat_2",
@@ -260,7 +374,10 @@
       "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_resalat_3",
@@ -270,7 +387,10 @@
       "direction": "E",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_resalat_4",
@@ -280,67 +400,75 @@
       "direction": "E",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_sadr_1",
       "highway_id": "sadr",
       "from_node": "n_sadr_mod",
-      "to_node": "n_pas_n",
+      "to_node": "n_sadr_say",
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "s_sadr_2",
+      "highway_id": "sadr",
+      "from_node": "n_sadr_say",
+      "to_node": "n_imam_sadr_bab",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_babaei_1",
       "highway_id": "babaei",
-      "from_node": "n_pas_n",
-      "to_node": "n_bab_say",
+      "from_node": "n_imam_sadr_bab",
+      "to_node": "n_bab_e",
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
-    },
-    {
-      "id": "s_babaei_2",
-      "highway_id": "babaei",
-      "from_node": "n_bab_say",
-      "to_node": "n_bab_imam",
-      "direction": "E",
-      "order_on_highway": 2,
-      "kind": "road",
-      "verified": false
-    },
-    {
-      "id": "s_babaei_3",
-      "highway_id": "babaei",
-      "from_node": "n_bab_imam",
-      "to_node": "n_bab_e",
-      "direction": "E",
-      "order_on_highway": 3,
-      "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_zeinoddin_1",
       "highway_id": "zeinoddin",
-      "from_node": "n_pas_h",
-      "to_node": "n_zei_say",
+      "from_node": "n_hem_say",
+      "to_node": "n_zei_imam",
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_zeinoddin_2",
       "highway_id": "zeinoddin",
-      "from_node": "n_zei_say",
-      "to_node": "n_zei_imam",
+      "from_node": "n_zei_imam",
+      "to_node": "n_zei_e",
       "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hakim_1",
@@ -350,7 +478,10 @@
       "direction": "E",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hakim_2",
@@ -360,7 +491,10 @@
       "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_hakim_3",
@@ -370,7 +504,10 @@
       "direction": "E",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_chamran_1",
@@ -380,7 +517,10 @@
       "direction": "W",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_chamran_2",
@@ -390,7 +530,10 @@
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_chamran_3",
@@ -400,7 +543,10 @@
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_chamran_4",
@@ -410,7 +556,10 @@
       "direction": "S",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_chamran_5",
@@ -420,7 +569,11 @@
       "direction": "S",
       "order_on_highway": 5,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ],
+      "note": "Ends at the Tohid Tunnel, which continues as Navvab."
     },
     {
       "id": "s_yadegar_1",
@@ -430,7 +583,10 @@
       "direction": "W",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_yadegar_2",
@@ -440,7 +596,10 @@
       "direction": "S",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_yadegar_3",
@@ -450,7 +609,10 @@
       "direction": "S",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_yadegar_4",
@@ -460,7 +622,10 @@
       "direction": "S",
       "order_on_highway": 4,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_yadegar_5",
@@ -470,37 +635,45 @@
       "direction": "S",
       "order_on_highway": 5,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_azadegan_1",
       "highway_id": "azadegan",
-      "from_node": "n_hem_w",
-      "to_node": "n_azg_bend1",
-      "direction": "S",
+      "from_node": "n_azg_start",
+      "to_node": "n_azg_bottom",
+      "direction": "SE",
       "order_on_highway": 1,
       "kind": "road",
-      "verified": false
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "s_azadegan_2",
       "highway_id": "azadegan",
-      "from_node": "n_azg_bend1",
-      "to_node": "n_azg_bend2",
-      "direction": "SE",
+      "from_node": "n_azg_bottom",
+      "to_node": "n_azg_wp",
+      "direction": "E",
       "order_on_highway": 2,
       "kind": "road",
-      "verified": false
+      "verified": false,
+      "source": []
     },
     {
       "id": "s_azadegan_3",
       "highway_id": "azadegan",
-      "from_node": "n_azg_bend2",
-      "to_node": "n_basij",
-      "direction": "E",
+      "from_node": "n_azg_wp",
+      "to_node": "n_azg_end",
+      "direction": "NE",
       "order_on_highway": 3,
       "kind": "road",
-      "verified": false
+      "verified": false,
+      "source": []
     }
   ]
 }

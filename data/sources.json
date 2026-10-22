@@ -1,6 +1,13 @@
 {
-  "_about": "Where each fact came from. IMPORTANT: OpenStreetMap/Overpass was blocked by this environment's network policy (HTTP 403 from the egress proxy), and direct fetches of Wikipedia also failed. Every 'wp_*' source below was read through web-search result summaries of that article, not by opening the page. Treat them as leads to check, not as proof. That is why every data row is verified:false.",
+  "_about": "Where each fact came from. Rows with source osm_overture are derived from OpenStreetMap geometry (see data/osm/summary.json and tools/derive_osm.py). The wp_*, fa_* and other ids were read through web-search summaries (pages could not be opened directly) and are kept only as context and for landmark coordinates.",
   "sources": [
+    {
+      "id": "osm_overture",
+      "title": "OpenStreetMap contributors via Overture Maps (transportation segments, release 2026-10-21.0)",
+      "url": "https://docs.overturemaps.org/guides/transportation/",
+      "license": "ODbL 1.0; attribution: © OpenStreetMap contributors",
+      "used_for": "Highway shape, line ends, which highways meet and where, name changes, ramp presence. Fetched from the public Overture S3 bucket because overpass-api.de was blocked in the build environment. Main carriageways only (OSM name exactly equal to the highway name). Overture re-publishes OSM ways; each segment keeps its OSM way id in data/osm/highways.geojson."
+    },
     {
       "id": "wp_chamran",
       "title": "Chamran Expressway",

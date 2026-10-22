@@ -15,7 +15,9 @@ const hwById = new Map(highways.map(h => [h.id, h]));
 const sourceIds = new Set(sources.map(s => s.id));
 
 const ORIENTATIONS = ['NS', 'EW', 'DIAGONAL', 'MIXED'];
-const ALLOWED_DIRS = { NS: ['N', 'S'], EW: ['E', 'W'], DIAGONAL: ['NE', 'NW', 'SE', 'SW'] };
+// NS lines may lean (diagonal pieces) but never run flat; EW lines never run straight up/down. MIXED/DIAGONAL: anything.
+const DIAG = ['NE', 'NW', 'SE', 'SW'];
+const ALLOWED_DIRS = { NS: ['N', 'S', ...DIAG], EW: ['E', 'W', ...DIAG] };
 const DIR_VECTORS = { N: [0, -1], S: [0, 1], E: [1, 0], W: [-1, 0], NE: [1, -1], NW: [-1, -1], SE: [1, 1], SW: [-1, 1] };
 
 for (const row of [...highways, ...nodes, ...landmarks])
@@ -36,6 +38,20 @@ for (const s of segments) {
   if (Math.sign(dx) !== ex || Math.sign(dy) !== ey) fail(`${s.id}: direction ${s.direction} does not match positions`);
   const allowed = ALLOWED_DIRS[h.orientation];
   if (allowed && !allowed.includes(s.direction)) fail(`${s.id}: ${s.direction} segment on ${h.orientation} highway ${h.id}`);
+
+  // The drawing must never run against the real coordinates (north = up, east = right). ~220 m tolerance.
+  // Only axes that actually move on the schematic are tested: a straight vertical line may drift sideways in reality.
+  if (a.lat != null && b.lat != null) {
+    const tol = 0.002, dlat = b.lat - a.lat, dlon = b.lon - a.lon;
+    if (dy !== 0 && Math.abs(dlat) > tol && Math.sign(dlat) !== -Math.sign(dy)) fail(`${s.id}: drawn ${s.direction} but OSM latitude goes the other way (${a.id} -> ${b.id})`);
+    if (dx !== 0 && Math.abs(dlon) > tol && Math.sign(dlon) !== Math.sign(dx)) fail(`${s.id}: drawn ${s.direction} but OSM longitude goes the other way (${a.id} -> ${b.id})`);
+  }
+  if (s.verified && !(a.verified && b.verified)) fail(`${s.id}: verified segment with an unverified end`);
+}
+
+for (const n of nodes) {
+  if (n.verified && n.type !== 'landmark' && !(n.osm && n.lat != null)) fail(`${n.id}: verified without OSM evidence`);
+  if (n.verified && !n.source?.length && n.type !== 'landmark') fail(`${n.id}: verified without a source`);
 }
 
 // Each highway's segments must form one chain in order_on_highway order.

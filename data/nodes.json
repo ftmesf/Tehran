@@ -1,682 +1,1019 @@
 {
-  "_about": "Interchanges, ends, squares, landmarks and hidden waypoints (bends). x,y = schematic screen position, north is up (smaller y = further north). Positions keep ORDER only, not distance. lat/lon only filled where a source gave coordinates; hidden from the learner.",
+  "_about": "Interchanges, ends, squares, landmarks, bends. x,y = schematic position (north up, smaller y = further north, order only). lat/lon from OpenStreetMap, hidden from the learner. osm = the evidence behind each node.",
   "rows": [
+    {
+      "id": "n_artesh",
+      "name_fa": "انتهای شمالی امام علی",
+      "name_en": "Imam Ali north end",
+      "type": "endpoint",
+      "x": 1340,
+      "y": 280,
+      "note": "",
+      "lat": 35.80905,
+      "lon": 51.49542,
+      "osm": {
+        "kind": "end",
+        "highway": "imam_ali",
+        "end": "north"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_say_imam",
+      "name_fa": "صیاد شیرازی × امام علی",
+      "name_en": "Sayyad Shirazi x Imam Ali (Sayyad ends here)",
+      "type": "interchange",
+      "x": 1340,
+      "y": 320,
+      "note": "Sayyad Shirazi runs up and joins Imam Ali here; it does not reach Babaei.",
+      "lat": 35.79919,
+      "lon": 51.49356,
+      "osm": {
+        "kind": "junction",
+        "pair": "sayyad|imam_ali",
+        "min_dist_m": 1,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 1
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
     {
       "id": "n_parkway",
       "name_fa": "پارک‌وی",
-      "name_en": "Parkway (Chamran / Modares / Valiasr)",
+      "name_en": "Parkway (Chamran meets Modares)",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 860,
       "y": 340,
-      "verified": false,
+      "note": "Chamran and Modares are ~0.6 km apart in OSM here; Parkway is the usual name for the bridge.",
+      "alias_fa": "پارک‌وی",
+      "alias_source": "wp_chamran",
+      "lat": 35.79078,
+      "lon": 51.41608,
+      "osm": {
+        "kind": "name_change",
+        "pair": "chamran|modares",
+        "gap_m": 574
+      },
+      "verified": true,
       "source": [
-        "wp_chamran",
-        "wp_modarres"
-      ],
-      "note": "North end of Modares and of Chamran, on Valiasr St."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_seoul",
-      "name_fa": "تقاطع چمران و یادگار (سئول)",
-      "name_en": "Chamran bend / Yadegar north end (Seoul St)",
+      "name_fa": "چمران × یادگار امام",
+      "name_en": "Chamran x Yadegar-e Emam (Seoul St)",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 500,
       "y": 340,
-      "verified": false,
+      "note": "",
+      "lat": 35.79002,
+      "lon": 51.39235,
+      "osm": {
+        "kind": "junction",
+        "pair": "chamran|yadegar",
+        "min_dist_m": 10,
+        "lines_cross": false,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_chamran",
-        "wp_yadegar"
-      ],
-      "note": "Chamran turns west-east near Seoul St; Yadegar-e Emam north end listed as Seoul St / Chamran."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_yad_bend",
       "name_fa": "",
       "name_en": "Yadegar-e Emam bend (west -> south)",
       "type": "waypoint",
-      "lat": null,
-      "lon": null,
       "x": 300,
       "y": 340,
-      "verified": false,
+      "note": "Not a junction: the westernmost point of Yadegar, where it turns south.",
+      "lat": 35.78052,
+      "lon": 51.34308,
+      "osm": {
+        "kind": "end",
+        "highway": "yadegar",
+        "end": "west"
+      },
+      "verified": true,
       "source": [
-        "wp_yadegar"
-      ],
-      "note": "Not a junction. Yadegar goes west a few km, then turns south."
-    },
-    {
-      "id": "n_artesh",
-      "name_fa": "انتهای شمالی امام علی (ارتش)",
-      "name_en": "Imam Ali north end (Artesh Expwy)",
-      "type": "endpoint",
-      "lat": null,
-      "lon": null,
-      "x": 1340,
-      "y": 340,
-      "verified": false,
-      "source": [
-        "wp_imam_ali"
-      ],
-      "note": "Only the end is sourced; its exact spot vs. other rows is not.",
-      "position_confidence": "low"
+        "osm_overture"
+      ]
     },
     {
       "id": "n_nia_w",
-      "name_fa": "انتهای غربی نیایش (اشرفی اصفهانی)",
-      "name_en": "Niayesh west end (Ashrafi Esfahani; continues as Abshenasan)",
+      "name_fa": "انتهای غربی نیایش",
+      "name_en": "Niayesh west end",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
       "x": 190,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "lat": 35.77051,
+      "lon": 51.33707,
+      "osm": {
+        "kind": "end",
+        "highway": "niayesh",
+        "end": "west"
+      },
+      "verified": true,
       "source": [
-        "wp_niayesh"
-      ],
-      "note": "Becomes Abshenasan after the Ashrafi Esfahani interchange."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_nia_yad",
       "name_fa": "نیایش × یادگار امام",
       "name_en": "Niayesh x Yadegar-e Emam",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 300,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "lat": 35.77131,
+      "lon": 51.34557,
+      "osm": {
+        "kind": "junction",
+        "pair": "niayesh|yadegar",
+        "min_dist_m": 171,
+        "lines_cross": false,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_niayesh",
-        "wp_yadegar"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_velayat",
-      "name_fa": "پل ولایت (نیایش × چمران)",
-      "name_en": "Velayat Bridge (Niayesh x Chamran)",
+      "name_fa": "نیایش × چمران",
+      "name_en": "Niayesh x Chamran",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 500,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "alias_fa": "پل ولایت",
+      "alias_source": "wp_chamran",
+      "lat": 35.77658,
+      "lon": 51.39104,
+      "osm": {
+        "kind": "junction",
+        "pair": "niayesh|chamran",
+        "min_dist_m": 9,
+        "lines_cross": false,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_chamran",
-        "wp_niayesh"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_nia_kord",
       "name_fa": "نیایش × کردستان",
-      "name_en": "Niayesh x Kordestan (Kordestan north end)",
+      "name_en": "Niayesh x Kordestan",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 680,
       "y": 440,
-      "verified": false,
+      "note": "Kordestan starts here.",
+      "lat": 35.774,
+      "lon": 51.40853,
+      "osm": {
+        "kind": "junction",
+        "pair": "kordestan|niayesh",
+        "min_dist_m": 0,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_kordestan",
-        "wp_niayesh"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_nia_vali",
-      "name_fa": "انتهای شرقی نیایش (ولیعصر)",
-      "name_en": "Niayesh east end (Valiasr St)",
+      "name_fa": "انتهای شرقی نیایش",
+      "name_en": "Niayesh east end (tunnel to Sadr)",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
       "x": 770,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "lat": 35.77163,
+      "lon": 51.41202,
+      "osm": {
+        "kind": "end",
+        "highway": "niayesh",
+        "end": "east"
+      },
+      "verified": true,
       "source": [
-        "wp_niayesh"
-      ],
-      "note": "Tunnel continues to Sadr."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_sadr_mod",
-      "name_fa": "صدر × مدرس (قلهک)",
-      "name_en": "Sadr west end on Modares (Gholhak)",
+      "name_fa": "صدر × مدرس",
+      "name_en": "Sadr x Modares",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 860,
       "y": 440,
-      "verified": false,
+      "note": "Sadr starts here (its tunnel from Niayesh arrives from the west).",
+      "lat": 35.77538,
+      "lon": 51.42793,
+      "osm": {
+        "kind": "junction",
+        "pair": "modares|sadr",
+        "min_dist_m": 0,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 1
+      },
+      "verified": true,
       "source": [
-        "wp_sadr",
-        "wp_modarres"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
-      "id": "n_pas_n",
-      "name_fa": "صدر / بابایی (پاسداران)",
-      "name_en": "Sadr -> Babaei at Pasdaran St",
+      "id": "n_sadr_say",
+      "name_fa": "صدر × صیاد شیرازی",
+      "name_en": "Sadr x Sayyad Shirazi",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1060,
+      "x": 1220,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "lat": 35.7883,
+      "lon": 51.48473,
+      "osm": {
+        "kind": "junction",
+        "pair": "sayyad|sadr",
+        "min_dist_m": 2,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_sadr",
-        "wp_babayi"
-      ],
-      "note": "Sadr becomes Babaei after crossing Pasdaran."
+        "osm_overture"
+      ]
     },
     {
-      "id": "n_bab_say",
-      "name_fa": "بابایی × صیاد شیرازی",
-      "name_en": "Babaei x Sayyad Shirazi (Sayyad north end)",
+      "id": "n_imam_sadr_bab",
+      "name_fa": "امام علی × صدر/بابایی",
+      "name_en": "Imam Ali x Sadr/Babaei",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1200,
-      "y": 440,
-      "verified": false,
-      "source": [
-        "wp_babayi",
-        "wp_sayyad"
-      ],
-      "note": ""
-    },
-    {
-      "id": "n_bab_imam",
-      "name_fa": "بابایی × امام علی",
-      "name_en": "Babaei x Imam Ali",
-      "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 1340,
       "y": 440,
-      "verified": false,
+      "note": "Sadr becomes Babaei about 0.6 km east of this point.",
+      "lat": 35.7858,
+      "lon": 51.49152,
+      "osm": {
+        "kind": "junction",
+        "pair": "imam_ali|babaei",
+        "min_dist_m": 1,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_babayi"
-      ],
-      "note": "Only the Babayi table lists this; Imam Ali is EAST of Sayyad there."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_bab_e",
       "name_fa": "انتهای شرقی بابایی",
-      "name_en": "Babaei east end (Tehran-Damavand / Parchin roads)",
+      "name_en": "Babaei east end",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
-      "x": 1450,
+      "x": 1420,
       "y": 440,
-      "verified": false,
+      "note": "",
+      "lat": 35.72692,
+      "lon": 51.63689,
+      "osm": {
+        "kind": "end",
+        "highway": "babaei",
+        "end": "east"
+      },
+      "verified": true,
       "source": [
-        "wp_babayi"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hem_w",
-      "name_fa": "انتهای غربی همت (آزادگان)",
-      "name_en": "Hemmat west end (Azadegan / Tehran-Shomal Fwy)",
-      "type": "interchange",
-      "lat": null,
-      "lon": null,
+      "name_fa": "انتهای غربی همت",
+      "name_en": "Hemmat west end (continues as Kharrazi)",
+      "type": "endpoint",
       "x": 110,
       "y": 560,
-      "verified": false,
+      "note": "OSM: Hemmat runs into Kharrazi Expressway here.",
+      "lat": 35.75728,
+      "lon": 51.26461,
+      "osm": {
+        "kind": "end",
+        "highway": "hemmat",
+        "end": "west"
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "wp_azadegan"
-      ],
-      "note": "CONFLICT: en-wiki infobox AND fa.wikifeqh say Hemmat ends at Kharrazi Expwy; only the en-wiki text says Azadegan / Tehran-Shomal Fwy. Both could be true if Hemmat continues as Kharrazi past this junction (my guess, no source)."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hem_yad",
       "name_fa": "همت × یادگار امام",
       "name_en": "Hemmat x Yadegar-e Emam",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 300,
       "y": 560,
-      "verified": false,
+      "note": "No ramp chain found within 500 m: may be pass-through only.",
+      "lat": 35.75117,
+      "lon": 51.34828,
+      "osm": {
+        "kind": "junction",
+        "pair": "hemmat|yadegar",
+        "min_dist_m": 1,
+        "lines_cross": true,
+        "ramp_in_osm": false,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "wp_yadegar"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hem_cham",
       "name_fa": "همت × چمران",
       "name_en": "Hemmat x Chamran",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 500,
       "y": 560,
-      "verified": false,
+      "note": "",
+      "lat": 35.75026,
+      "lon": 51.38641,
+      "osm": {
+        "kind": "junction",
+        "pair": "hemmat|chamran",
+        "min_dist_m": 24,
+        "lines_cross": false,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "wp_chamran"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hem_kord",
       "name_fa": "همت × کردستان",
       "name_en": "Hemmat x Kordestan",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 680,
       "y": 560,
-      "verified": false,
+      "note": "",
+      "lat": 35.7514,
+      "lon": 51.40414,
+      "osm": {
+        "kind": "junction",
+        "pair": "kordestan|hemmat",
+        "min_dist_m": 1,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "wp_kordestan"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_fajr",
-      "name_fa": "تقاطع فجر (همت × مدرس)",
-      "name_en": "Fajr Interchange (Hemmat x Modares)",
+      "name_fa": "همت × مدرس",
+      "name_en": "Hemmat x Modares",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 860,
       "y": 560,
-      "verified": false,
+      "note": "",
+      "alias_fa": "تقاطع فجر",
+      "alias_source": "wp_hemmat",
+      "lat": 35.74946,
+      "lon": 51.42172,
+      "osm": {
+        "kind": "junction",
+        "pair": "modares|hemmat",
+        "min_dist_m": 1,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat",
-        "wp_modarres"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
-      "id": "n_pas_h",
-      "name_fa": "همت / زین‌الدین (پاسداران)",
-      "name_en": "Hemmat -> Zeinoddin at Pasdaran / Shariati",
+      "id": "n_hem_say",
+      "name_fa": "همت/زین‌الدین × صیاد شیرازی",
+      "name_en": "Hemmat becomes Zeinoddin x Sayyad Shirazi",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1060,
+      "x": 1220,
       "y": 560,
-      "verified": false,
+      "note": "Hemmat ends and Zeinoddin begins exactly at the Sayyad Shirazi crossing (0 m gap).",
+      "lat": 35.75682,
+      "lon": 51.46552,
+      "osm": {
+        "kind": "junction",
+        "pair": "sayyad|hemmat",
+        "min_dist_m": 4,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hemmat"
-      ],
-      "note": "Hemmat east end."
-    },
-    {
-      "id": "n_zei_say",
-      "name_fa": "زین‌الدین × صیاد شیرازی",
-      "name_en": "Zeinoddin x Sayyad Shirazi",
-      "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1200,
-      "y": 560,
-      "verified": false,
-      "source": [
-        "wp_zeinoddin",
-        "wp_sayyad"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_zei_imam",
       "name_fa": "زین‌الدین × امام علی",
       "name_en": "Zeinoddin x Imam Ali",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 1340,
       "y": 560,
-      "verified": false,
+      "note": "",
+      "lat": 35.75903,
+      "lon": 51.48449,
+      "osm": {
+        "kind": "junction",
+        "pair": "imam_ali|zeinoddin",
+        "min_dist_m": 2,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_zeinoddin"
-      ],
-      "note": "Zeinoddin table: Imam Ali is EAST of Sayyad."
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_zei_e",
+      "name_fa": "انتهای شرقی زین‌الدین",
+      "name_en": "Zeinoddin east end",
+      "type": "endpoint",
+      "x": 1420,
+      "y": 560,
+      "note": "",
+      "lat": 35.7237,
+      "lon": 51.59256,
+      "osm": {
+        "kind": "end",
+        "highway": "zeinoddin",
+        "end": "east"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hak_w",
-      "name_fa": "میدان علامه جعفری (انتهای غربی حکیم)",
-      "name_en": "Allameh Jafari Sq (Hakim west end)",
-      "type": "square",
-      "lat": null,
-      "lon": null,
+      "name_fa": "انتهای غربی حکیم",
+      "name_en": "Hakim west end",
+      "type": "endpoint",
       "x": 170,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.73236,
+      "lon": 51.3064,
+      "osm": {
+        "kind": "end",
+        "highway": "hakim",
+        "end": "west"
+      },
+      "verified": true,
       "source": [
-        "wp_hakim",
-        "wp_allameh_jafari"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hak_yad",
       "name_fa": "حکیم × یادگار امام",
       "name_en": "Hakim x Yadegar-e Emam",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 300,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.74091,
+      "lon": 51.34682,
+      "osm": {
+        "kind": "junction",
+        "pair": "hakim|yadegar",
+        "min_dist_m": 9,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hakim",
-        "wp_yadegar"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_hak_cham",
       "name_fa": "حکیم × چمران",
       "name_en": "Hakim x Chamran",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 500,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.74283,
+      "lon": 51.38379,
+      "osm": {
+        "kind": "junction",
+        "pair": "hakim|chamran",
+        "min_dist_m": 2,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 1
+      },
+      "verified": true,
       "source": [
-        "wp_hakim",
-        "wp_chamran"
-      ],
-      "note": "Chamran article says \"Resalat\" here; Hakim article lists Chamran. Assumed Hakim."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_kord_hak_res",
-      "name_fa": "کردستان / حکیم / رسالت",
-      "name_en": "Kordestan x Hakim/Resalat (Hakim ends, Resalat begins)",
+      "name_fa": "کردستان × حکیم/رسالت",
+      "name_en": "Kordestan x Hakim/Resalat",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 680,
       "y": 740,
-      "verified": false,
+      "note": "Hakim ends and Resalat begins about 0.25 km east of this crossing.",
+      "lat": 35.7433,
+      "lon": 51.40173,
+      "osm": {
+        "kind": "junction",
+        "pair": "kordestan|hakim",
+        "min_dist_m": 6,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_hakim",
-        "wp_resalat",
-        "wp_kordestan"
-      ],
-      "note": "Hakim east end = Resalat west end, just past Resalat Tunnel."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_res_mod",
       "name_fa": "رسالت × مدرس",
       "name_en": "Resalat x Modares",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 860,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.74036,
+      "lon": 51.42279,
+      "osm": {
+        "kind": "junction",
+        "pair": "modares|resalat",
+        "min_dist_m": 2,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_modarres"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_sayyad_ic",
-      "name_fa": "تقاطع صیاد شیرازی (رسالت × صیاد)",
-      "name_en": "Sayyad Shirazi Interchange (Resalat x Sayyad)",
+      "name_fa": "رسالت × صیاد شیرازی",
+      "name_en": "Resalat x Sayyad Shirazi",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1200,
+      "x": 1220,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "alias_fa": "تقاطع صیاد شیرازی",
+      "alias_source": "wp_sayyad",
+      "lat": 35.74116,
+      "lon": 51.46074,
+      "osm": {
+        "kind": "junction",
+        "pair": "sayyad|resalat",
+        "min_dist_m": 3,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "wp_sayyad",
-        "wp_resalat"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_res_imam",
       "name_fa": "رسالت × امام علی",
       "name_en": "Resalat x Imam Ali",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 1340,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.73755,
+      "lon": 51.4833,
+      "osm": {
+        "kind": "junction",
+        "pair": "imam_ali|resalat",
+        "min_dist_m": 6,
+        "lines_cross": true,
+        "ramp_in_osm": true,
+        "other_clusters": 0
+      },
+      "verified": true,
       "source": [
-        "aaroads_resalat_via_search",
-        "fa_imam_ali_list"
-      ],
-      "note": "Added in pass 2: AARoads Resalat list names Imam Ali, and a Persian summary lists Resalat among Imam Ali crossings. Both are search summaries."
+        "osm_overture"
+      ]
     },
     {
       "id": "n_res_e",
-      "name_fa": "انتهای شرقی رسالت (یاسینی)",
-      "name_en": "Resalat east end (Yasini Expwy)",
+      "name_fa": "انتهای شرقی رسالت",
+      "name_en": "Resalat east end",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
-      "x": 1450,
+      "x": 1420,
       "y": 740,
-      "verified": false,
+      "note": "",
+      "lat": 35.72289,
+      "lon": 51.53879,
+      "osm": {
+        "kind": "end",
+        "highway": "resalat",
+        "end": "east"
+      },
+      "verified": true,
       "source": [
-        "wp_resalat"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_kord_s",
-      "name_fa": "انتهای جنوبی کردستان (جلال آل احمد)",
-      "name_en": "Kordestan south end (Jalal-e Al-e Ahmad / Shahid Gomnam)",
+      "name_fa": "انتهای جنوبی کردستان",
+      "name_en": "Kordestan south end",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
       "x": 680,
       "y": 840,
-      "verified": false,
-      "source": [
-        "wp_kordestan"
-      ],
       "note": "",
-      "position_confidence": "low"
-    },
-    {
-      "id": "n_yad_s",
-      "name_fa": "انتهای جنوبی یادگار امام (خیابان آزادی)",
-      "name_en": "Yadegar-e Emam south end (Azadi Ave)",
-      "type": "endpoint",
-      "lat": null,
-      "lon": null,
-      "x": 300,
-      "y": 850,
-      "verified": false,
+      "lat": 35.72498,
+      "lon": 51.39496,
+      "osm": {
+        "kind": "end",
+        "highway": "kordestan",
+        "end": "south"
+      },
+      "verified": true,
       "source": [
-        "wp_yadegar"
-      ],
-      "note": "CONFLICT: en-wiki text says Azadi Ave, its infobox says U-turn, fa.wikifeqh says Hashemi St in the south-west. Three sources, three answers.",
-      "position_confidence": "low"
-    },
-    {
-      "id": "n_sepah",
-      "name_fa": "میدان سپاه",
-      "name_en": "Sepah Sq (Sayyad south end)",
-      "type": "square",
-      "lat": null,
-      "lon": null,
-      "x": 1200,
-      "y": 860,
-      "verified": false,
-      "source": [
-        "wp_sayyad"
-      ],
-      "note": "",
-      "position_confidence": "low"
+        "osm_overture"
+      ]
     },
     {
       "id": "n_haft_tir",
-      "name_fa": "میدان هفت تیر",
-      "name_en": "Haft-e Tir Sq (Modares south end)",
-      "type": "square",
-      "lat": null,
-      "lon": null,
+      "name_fa": "انتهای جنوبی مدرس",
+      "name_en": "Modares south end",
+      "type": "endpoint",
       "x": 860,
       "y": 880,
-      "verified": false,
-      "source": [
-        "wp_modarres"
-      ],
       "note": "",
-      "position_confidence": "low"
+      "lat": 35.71845,
+      "lon": 51.42727,
+      "osm": {
+        "kind": "end",
+        "highway": "modares",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_sepah",
+      "name_fa": "انتهای جنوبی صیاد شیرازی",
+      "name_en": "Sayyad Shirazi south end",
+      "type": "endpoint",
+      "x": 1220,
+      "y": 920,
+      "note": "",
+      "lat": 35.70632,
+      "lon": 51.44035,
+      "osm": {
+        "kind": "end",
+        "highway": "sayyad",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "n_tohid",
-      "name_fa": "تونل توحید (چمران ← نواب)",
+      "name_fa": "تونل توحید",
       "name_en": "Tohid Tunnel (Chamran becomes Navvab)",
       "type": "interchange",
-      "lat": null,
-      "lon": null,
       "x": 500,
       "y": 940,
-      "verified": false,
+      "note": "About 1 km gap between the two roads in OSM (the tunnel).",
+      "lat": 35.70122,
+      "lon": 51.37801,
+      "osm": {
+        "kind": "name_change",
+        "pair": "chamran|navvab",
+        "gap_m": 1033
+      },
+      "verified": true,
       "source": [
-        "wp_chamran",
-        "wp_navvab"
-      ],
-      "note": ""
+        "osm_overture"
+      ]
     },
     {
       "id": "n_nav_s",
-      "name_fa": "انتهای جنوبی نواب (قلعه‌مرغی)",
-      "name_en": "Navvab south end (Qale Morghi / Niruye Havaei)",
+      "name_fa": "انتهای جنوبی نواب",
+      "name_en": "Navvab south end",
       "type": "endpoint",
-      "lat": null,
-      "lon": null,
       "x": 500,
-      "y": 1050,
-      "verified": false,
-      "source": [
-        "wp_navvab"
-      ],
+      "y": 1060,
       "note": "",
-      "position_confidence": "low"
+      "lat": 35.65684,
+      "lon": 51.38242,
+      "osm": {
+        "kind": "end",
+        "highway": "navvab",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
-      "id": "n_azg_bend1",
-      "name_fa": "",
-      "name_en": "Azadegan bend (west side -> south side)",
-      "type": "waypoint",
-      "lat": null,
-      "lon": null,
+      "id": "n_yad_s",
+      "name_fa": "انتهای جنوبی یادگار امام",
+      "name_en": "Yadegar-e Emam south end",
+      "type": "endpoint",
+      "x": 300,
+      "y": 1000,
+      "note": "",
+      "lat": 35.68468,
+      "lon": 51.35442,
+      "osm": {
+        "kind": "end",
+        "highway": "yadegar",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_imam_s",
+      "name_fa": "انتهای جنوبی امام علی",
+      "name_en": "Imam Ali south end",
+      "type": "endpoint",
+      "x": 1340,
+      "y": 1190,
+      "note": "",
+      "lat": 35.5977,
+      "lon": 51.45433,
+      "osm": {
+        "kind": "end",
+        "highway": "imam_ali",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_azg_start",
+      "name_fa": "انتهای شمال‌غربی آزادگان",
+      "name_en": "Azadegan north-west end",
+      "type": "endpoint",
       "x": 110,
-      "y": 1050,
-      "verified": false,
-      "source": [
-        "wp_azadegan"
-      ],
-      "note": "Not a junction. Shape inferred from which roads meet it."
-    },
-    {
-      "id": "n_azg_bend2",
-      "name_fa": "",
-      "name_en": "Azadegan bend (south-west corner)",
-      "type": "waypoint",
-      "lat": null,
-      "lon": null,
-      "x": 230,
-      "y": 1170,
-      "verified": false,
-      "source": [
-        "wp_azadegan"
-      ],
-      "note": "Not a junction."
-    },
-    {
-      "id": "n_basij",
-      "name_fa": "تقاطع بسیج (انتهای شرقی آزادگان)",
-      "name_en": "Basij Interchange (Azadegan east end)",
-      "type": "interchange",
-      "lat": null,
-      "lon": null,
-      "x": 1320,
-      "y": 1170,
-      "verified": false,
-      "source": [
-        "wp_azadegan"
-      ],
+      "y": 1010,
       "note": "",
-      "position_confidence": "low"
+      "lat": 35.67651,
+      "lon": 51.231,
+      "osm": {
+        "kind": "end",
+        "highway": "azadegan",
+        "end": "west"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_azg_bottom",
+      "name_fa": "",
+      "name_en": "Azadegan southernmost bend",
+      "type": "waypoint",
+      "x": 250,
+      "y": 1150,
+      "note": "Not a junction.",
+      "lat": 35.60787,
+      "lon": 51.34778,
+      "osm": {
+        "kind": "end",
+        "highway": "azadegan",
+        "end": "south"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
+    },
+    {
+      "id": "n_azg_wp",
+      "name_fa": "",
+      "name_en": "Azadegan bend (schematic only)",
+      "type": "waypoint",
+      "x": 780,
+      "y": 1150,
+      "note": "Only here so the line can use 0/45/90 degree angles.",
+      "lat": null,
+      "lon": null,
+      "osm": null,
+      "verified": false,
+      "source": []
+    },
+    {
+      "id": "n_azg_end",
+      "name_fa": "انتهای جنوب‌شرقی آزادگان",
+      "name_en": "Azadegan south-east end",
+      "type": "endpoint",
+      "x": 806,
+      "y": 1124,
+      "note": "",
+      "lat": 35.62199,
+      "lon": 51.42594,
+      "osm": {
+        "kind": "end",
+        "highway": "azadegan",
+        "end": "east"
+      },
+      "verified": true,
+      "source": [
+        "osm_overture"
+      ]
     },
     {
       "id": "lm_tajrish",
       "name_fa": "تجریش",
       "name_en": "Tajrish",
       "type": "landmark",
+      "x": 960,
+      "y": 272,
       "lat": 35.8056,
       "lon": 51.4381,
-      "x": 800,
-      "y": 272,
-      "verified": false,
+      "note": "North end of Valiasr St.",
       "source": [
         "wp_tajrish",
         "wp_valiasr"
       ],
-      "note": "North end of Valiasr St."
+      "osm": {
+        "kind": "consistency_check",
+        "all_ok": false,
+        "osm_square_centre": [
+          35.80699,
+          51.42883
+        ],
+        "wikipedia_coords": [
+          35.8056,
+          51.4381
+        ],
+        "distance_m": 852
+      },
+      "verified": false
     },
     {
       "id": "lm_milad",
       "name_fa": "برج میلاد",
       "name_en": "Milad Tower",
       "type": "landmark",
-      "lat": 35.7447,
-      "lon": 51.3753,
       "x": 400,
       "y": 640,
-      "verified": false,
+      "lat": 35.7447,
+      "lon": 51.3753,
+      "note": "OSM check: Hemmat is north of it, Hakim south, Chamran east, Sheikh Fazlollah Nouri west.",
       "source": [
         "wp_milad",
         "surfiran_milad"
       ],
-      "note": "Box: Hemmat N, Hakim S, Sheikh Fazlollah W, Chamran E."
+      "osm": {
+        "kind": "consistency_check",
+        "all_ok": true,
+        "box": {
+          "hemmat": {
+            "expected_side": "N",
+            "actual_side": "N",
+            "distance_m": 528,
+            "ok": true
+          },
+          "hakim": {
+            "expected_side": "S",
+            "actual_side": "S",
+            "distance_m": 370,
+            "ok": true
+          },
+          "chamran": {
+            "expected_side": "E",
+            "actual_side": "E",
+            "distance_m": 750,
+            "ok": true
+          },
+          "sheikh_fazlollah": {
+            "expected_side": "W",
+            "actual_side": "W",
+            "distance_m": 456,
+            "ok": true
+          }
+        }
+      },
+      "verified": true
     },
     {
       "id": "lm_azadi",
       "name_fa": "برج آزادی",
       "name_en": "Azadi Tower",
       "type": "landmark",
+      "x": 215,
+      "y": 960,
       "lat": 35.6994,
       "lon": 51.3378,
-      "x": 215,
-      "y": 880,
-      "verified": false,
+      "note": "West entrance of the city.",
       "source": [
         "wp_azadi"
       ],
-      "note": "West entrance of the city."
+      "osm": {
+        "kind": "consistency_check",
+        "all_ok": false,
+        "osm_square_centre": [
+          35.70331,
+          51.34858
+        ],
+        "wikipedia_coords": [
+          35.6994,
+          51.3378
+        ],
+        "distance_m": 1066
+      },
+      "verified": false
     },
     {
       "id": "lm_rahahan",
       "name_fa": "ایستگاه راه‌آهن",
       "name_en": "Tehran railway station (Rah-Ahan)",
       "type": "landmark",
+      "x": 710,
+      "y": 1052,
       "lat": 35.658,
       "lon": 51.398,
-      "x": 640,
-      "y": 1040,
-      "verified": false,
+      "note": "South end of Valiasr St.",
       "source": [
         "wp_tehran_rail",
         "wp_valiasr"
       ],
-      "note": "South end of Valiasr St."
+      "osm": {
+        "kind": "consistency_check",
+        "all_ok": true,
+        "osm_square_centre": [
+          35.6593,
+          51.39801
+        ],
+        "wikipedia_coords": [
+          35.658,
+          51.398
+        ],
+        "distance_m": 144
+      },
+      "verified": true
     }
   ]
 }
