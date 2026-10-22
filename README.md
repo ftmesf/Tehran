@@ -2,7 +2,7 @@
 
 A small learning app that teaches Tehran's highway network as a **graph with fixed positions**. North is always up, and the Alborz mountains are always at the top.
 
-**Status: Phase 1 (data only).** The data is derived from OpenStreetMap; 109 of 116 rows are `verified: true`. What is still open is in [`REVIEW.md`](REVIEW.md).
+**Status: Phase 2 (explore mode).** Open `index.html` (one self-contained file, no server needed): click any highway, interchange, segment or landmark and the side panel shows the table rows and the SQL behind it. The data is derived from OpenStreetMap; 109 of 116 rows are `verified: true`. What is still open is in [`REVIEW.md`](REVIEW.md). Quizzes (Phase 3) and routing (Phase 4) are not built yet.
 
 ## What is here
 
@@ -15,6 +15,8 @@ A small learning app that teaches Tehran's highway network as a **graph with fix
 | `data/sources.json` | Where each fact came from |
 | `data/osm/summary.json` | Junctions, name changes, line ends and landmark checks derived from OSM |
 | `data/osm/highways.geojson` | The real carriageways of the 15 highways with OSM way ids (for the optional real-map view) |
+| `index.html` | **The app (explore mode).** Generated: map + data + CSS + JS in one file. Coordinates are stripped from the embedded data. |
+| `app/` | Source of the app: `app.js`, `app.css`, `index.template.html` |
 | `map/schematic.svg` | The static schematic map (follows light/dark theme) |
 | `map/schematic-full.png`, `-25pct.png`, `-full-dark.png` | Squint-test exports |
 
@@ -28,8 +30,10 @@ npm run derive:osm   # raw segments -> data/osm/summary.json + highways.geojson
 npm run build:data   # summary.json + schematic layout -> data/*.json
 npm run validate     # integrity + "the drawing never contradicts the real coordinates"
 npm run build:map    # data -> map/schematic.svg
+npm run build:app    # data + svg + app/ -> index.html
 npm run render       # svg -> PNGs (needs Playwright + Chromium)
-npm run build        # data, validate, map, render
+npm run test:app     # headless-browser smoke test of explore mode (needs Playwright + Chromium)
+npm run build        # data, validate, map, app, render, test
 ```
 
 The committed `data/osm/` files are enough to run everything from `build:data` onward.

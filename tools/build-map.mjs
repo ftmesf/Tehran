@@ -96,10 +96,10 @@ function highwayLayers() {
     const d = pathFor(ids);
     const special = h.orientation === 'MIXED' || h.orientation === 'DIAGONAL';
     casings.push(`<path d="${d}" class="casing" data-highway="${h.id}"/>`);
-    if (special) outlines.push(`<path d="${d}" class="special-outline"/>`);
+    if (special) outlines.push(`<path d="${d}" class="special-outline" data-highway="${h.id}"/>`);
     cores.push(`<path d="${d}" class="core ${special ? 'core-special' : ''}" stroke="${h.color}" data-highway="${h.id}"><title>${esc(h.name_en)} (${h.orientation})</title></path>`);
     for (const s of segs.filter(s => s.kind === 'tunnel'))
-      tunnels.push(`<path d="${pathFor([s.from_node, s.to_node])}" class="tunnel"/>`);
+      tunnels.push(`<path d="${pathFor([s.from_node, s.to_node])}" class="tunnel" data-highway="${h.id}"/>`);
   }
   return `<g id="highways">${casings.join('')}${outlines.join('')}${cores.join('')}${tunnels.join('')}</g>`;
 }
@@ -107,8 +107,15 @@ function highwayLayers() {
 function nodeLayer() {
   return `<g id="nodes">` + nodes.filter(n => n.type !== 'waypoint' && n.type !== 'landmark').map(n => {
     const r = n.type === 'endpoint' ? 9 : 12;
-    return `<circle cx="${n.x}" cy="${n.y}" r="${r}" class="node node-${n.type}" data-node="${n.id}"><title>${esc(n.name_en)}</title></circle>`;
+    return `<circle cx="${n.x}" cy="${n.y}" r="${r}" class="node node-${n.type}" data-node="${n.id}"><title>${esc(n.name_en)}</title></circle>` +
+           `<circle cx="${n.x}" cy="${n.y}" r="26" class="hit-node" data-node="${n.id}"/>`;
   }).join('') + `</g>`;
+}
+
+// ---------- invisible click targets for the interactive app (transparent, so PNG exports are unchanged) ----------
+function segmentHits() {
+  return `<g id="hit-segments">` + segments.map(s =>
+    `<path d="${pathFor([s.from_node, s.to_node])}" class="hit" data-segment="${s.id}"/>`).join('') + `</g>`;
 }
 
 function highwayLabels() {
@@ -209,6 +216,8 @@ const style = `
   .special-outline{fill:none;stroke:var(--special-dash);stroke-width:28;stroke-dasharray:16 12;stroke-linecap:butt;stroke-linejoin:round}
   .core{fill:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
   .core-special{stroke-width:14}
+  .hit{fill:none;stroke:transparent;stroke-width:44;stroke-linecap:round;stroke-linejoin:round;pointer-events:stroke}
+  .hit-node{fill:transparent;stroke:none;pointer-events:all}
   .tunnel{fill:none;stroke:var(--casing);stroke-width:6;stroke-dasharray:10 10}
     .node{fill:var(--node);stroke:#17202b;stroke-width:4}
   .node-endpoint{stroke-width:3}
@@ -235,6 +244,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
 ${background()}
 ${mountains()}
 ${highwayLayers()}
+${segmentHits()}
 ${nodeLayer()}
 ${landmarkLayer()}
 ${highwayLabels()}
