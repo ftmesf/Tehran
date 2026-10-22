@@ -1,0 +1,5 @@
+node_modules/
+# 24 MB raw download; regenerate with: npm run fetch:osm
+data/raw/
+__pycache__/
+*.pyc

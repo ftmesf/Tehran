@@ -1,0 +1,204 @@
+{
+  "_about": "Where each fact came from. Rows with source osm_overture are derived from OpenStreetMap geometry (see data/osm/summary.json and tools/derive_osm.py). The wp_*, fa_* and other ids were read through web-search summaries (pages could not be opened directly) and are kept only as context and for landmark coordinates.",
+  "sources": [
+    {
+      "id": "osm_overture",
+      "title": "OpenStreetMap contributors via Overture Maps (transportation segments, release 2026-10-21.0)",
+      "url": "https://docs.overturemaps.org/guides/transportation/",
+      "license": "ODbL 1.0; attribution: © OpenStreetMap contributors",
+      "used_for": "Highway shape, line ends, which highways meet and where, name changes, ramp presence. Fetched from the public Overture S3 bucket because overpass-api.de was blocked in the build environment. Main carriageways only (OSM name exactly equal to the highway name). Overture re-publishes OSM ways; each segment keeps its OSM way id in data/osm/highways.geojson."
+    },
+    {
+      "id": "wp_chamran",
+      "title": "Chamran Expressway",
+      "url": "https://en.wikipedia.org/wiki/Chamran_Expressway",
+      "used_for": "Ends (N: Modares/Valiasr = Parkway; S: Tohid Tunnel); crossings S->N: Jalal-e Al-e Ahmad (Nasr Bridge), 'Resalat' (probably Hakim, see REVIEW), Hemmat, Niayesh (Velayat Bridge). Article content dated Aug 2007. A search summary (Chamran or Yadegar article, unclear which) says Chamran 'changes its direction to west-east near Seoul Street'."
+    },
+    {
+      "id": "wp_modarres",
+      "title": "Modarres Expressway",
+      "url": "https://en.wikipedia.org/wiki/Modarres_Expressway",
+      "used_for": "Ends (N: Chamran/Valiasr; S: Haft-e Tir Sq); N->S order: Sadr, Haghani, Fajr Interchange (Hemmat), Resalat."
+    },
+    {
+      "id": "wp_kordestan",
+      "title": "Kordestan Expressway",
+      "url": "https://en.wikipedia.org/wiki/Kordestan_Expressway",
+      "used_for": "N end Niayesh; passes Hemmat then Resalat/Hakim; S end Jalal-e Al-e Ahmad / Shahid Gomnam. Table labels described as unclear."
+    },
+    {
+      "id": "wp_yadegar",
+      "title": "Yadegar-e-Emam Expressway",
+      "url": "https://en.wikipedia.org/wiki/Yadegar-e-Emam_Expressway",
+      "used_for": "Starts at Evin, goes west a few km, turns south, ends at Azadi Avenue; N end listed as Seoul St / Chamran; crosses Niayesh, Hemmat, then Hakim. Article tagged 'multiple issues'."
+    },
+    {
+      "id": "wp_navvab",
+      "title": "Navvab Expressway",
+      "url": "https://en.wikipedia.org/wiki/Navvab_Expressway",
+      "used_for": "Chamran renamed after Tohid Tunnel; runs south to the Qale Morghi / Niruye Havaei junction; ~5.5 km."
+    },
+    {
+      "id": "wp_imam_ali",
+      "title": "Imam Ali Expressway",
+      "url": "https://en.wikipedia.org/wiki/Imam_Ali_Expressway",
+      "used_for": "Ends only: N Artesh Expressway, S Avini Expressway; 'from Darabad to Ray'. No junction table found."
+    },
+    {
+      "id": "wp_sayyad",
+      "title": "Sayyad Expressway (Sayyad Shirazi)",
+      "url": "https://en.wikipedia.org/wiki/Sayyad_Expressway",
+      "used_for": "N end Babayi; N->S: Zeinoddin, Sayyad Shirazi Interchange (Resalat); S end Sepah Sq; ~10.7 km."
+    },
+    {
+      "id": "wp_hemmat",
+      "title": "Hemmat Expressway",
+      "url": "https://en.wikipedia.org/wiki/Hemmat_Expressway",
+      "used_for": "E end Pasdaran/Shariati/Zeinoddin; E->W: Haghani, Fajr (Modares), Africa Blvd, Gandhi St, Kordestan, Sheikh Bahaei/Chamran, Sheikh Fazlollah Nouri, Yadegar-e Emam, Ashrafi Esfahani. W end conflicts: infobox says Kharrazi, text says Azadegan / Tehran-Shomal Freeway."
+    },
+    {
+      "id": "wp_hakim",
+      "title": "Hakim Expressway",
+      "url": "https://en.wikipedia.org/wiki/Hakim_Expressway",
+      "used_for": "E end = Resalat/Kordestan junction after Resalat Tunnel; E->W: Kordestan, Sheikh Bahai, Kargar, Chamran, Sheikh Fazlollah Nouri, Yadegar-e Emam, Laleh, Ashrafi Esfahani; W end Allameh Jafari (Nour) Sq."
+    },
+    {
+      "id": "wp_resalat",
+      "title": "Qasem Soleimani Expressway (formerly Resalat)",
+      "url": "https://en.wikipedia.org/wiki/Qasem_Soleimani_Expressway",
+      "used_for": "Renamed from Resalat; W end Hakim/Kordestan, E end Yasini; ~12 km."
+    },
+    {
+      "id": "wp_niayesh",
+      "title": "Hashemi Rafsanjani Expressway (Niayesh)",
+      "url": "https://en.wikipedia.org/wiki/Hashemi_Rafsanjani_Expressway",
+      "used_for": "Official name of Niayesh; starts at Valiasr St, becomes Abshenasan after Ashrafi Esfahani interchange; passes Kordestan, Chamran, Yadegar-e Emam; E end linked to Sadr by a tunnel."
+    },
+    {
+      "id": "wp_sadr",
+      "title": "Sadr Expressway",
+      "url": "https://en.wikipedia.org/wiki/Sadr_Expressway",
+      "used_for": "W end Modares (Gholhak); E end Babayi / Pasdaran; ~5 km."
+    },
+    {
+      "id": "wp_babayi",
+      "title": "Babayi Expressway",
+      "url": "https://en.wikipedia.org/wiki/Babayi_Expressway",
+      "used_for": "W end Sadr/Pasdaran; E end Tehran-Damavand & Tehran-Parchin roads; E->W table: Niru-ye Zamini Blvd, Imam Ali, Sayyad, ..., Sadr; ~16.5 km."
+    },
+    {
+      "id": "wp_zeinoddin",
+      "title": "Zeinoddin Expressway",
+      "url": "https://en.wikipedia.org/wiki/Zeinoddin_Expressway",
+      "used_for": "E->W table: Bagheri, Imam Ali, Sayyad; continues Hemmat east of Pasdaran."
+    },
+    {
+      "id": "wp_azadegan",
+      "title": "Azadegan Expressway",
+      "url": "https://en.wikipedia.org/wiki/Azadegan_Expressway",
+      "used_for": "'Tehran Ringway', southern Tehran; E end Basij Interchange; W end Hemmat / Tehran-Shomal Freeway; met by Sheikh Fazlollah Nouri, Allameh Jafari, Saidi (west side) and Tondguyan, Behesht-e Zahra, Raisi (south side)."
+    },
+    {
+      "id": "wp_allameh_jafari",
+      "title": "Allameh Jafari Expressway",
+      "url": "https://en.wikipedia.org/wiki/Allameh_Jafari_Expressway",
+      "used_for": "Connects the west end of Hakim to Azadi Stadium; its W end is at Azadegan."
+    },
+    {
+      "id": "wp_milad",
+      "title": "Milad Tower",
+      "url": "https://en.wikipedia.org/wiki/Milad_Tower",
+      "used_for": "Hemmat to the north, Hakim to the south, Sheikh Fazlollah Nouri to the west, Chamran to the east; coords 35.7447 N, 51.3753 E."
+    },
+    {
+      "id": "surfiran_milad",
+      "title": "SURFIRAN mag: Tehran Milad Tower",
+      "url": "https://surfiran.com/mag/tehran-milad-tower/",
+      "used_for": "Independent confirmation of the same four bounding highways."
+    },
+    {
+      "id": "wp_azadi",
+      "title": "Azadi Tower / Azadi Square",
+      "url": "https://en.wikipedia.org/wiki/Azadi_Tower",
+      "used_for": "Western entrance of Tehran; coords 35.6994 N, 51.3378 E."
+    },
+    {
+      "id": "wp_tajrish",
+      "title": "Tajrish",
+      "url": "https://en.wikipedia.org/wiki/Tajrish",
+      "used_for": "Coords 35.8056 N, 51.4381 E (an older revision gives a point ~1 km west); ~1600 m altitude."
+    },
+    {
+      "id": "wp_tehran_rail",
+      "title": "Tehran railway station",
+      "url": "https://en.wikipedia.org/wiki/Tehran_railway_station",
+      "used_for": "Coords 35.658 N, 51.398 E; located at Rah Ahan Square."
+    },
+    {
+      "id": "wp_valiasr",
+      "title": "Valiasr Street",
+      "url": "https://en.wikipedia.org/wiki/Valiasr_Street",
+      "used_for": "Runs from Rah Ahan (railway) Square in the south to Tajrish in the north, ~17.9 km."
+    },
+    {
+      "id": "unesco_valiasr",
+      "title": "UNESCO Tentative List: Valiasr Street",
+      "url": "https://whc.unesco.org/en/tentativelists/6387/",
+      "used_for": "Rah-ahan Square ~1117 m, Tajrish Square ~1615 m: the slope from south to north."
+    },
+    {
+      "id": "fa_wikifeqh_kordestan",
+      "title": "ویکی‌فقه: بزرگراه کردستان (تهران)",
+      "url": "https://fa.wikifeqh.ir/بزرگراه_کردستان_(تهران)",
+      "used_for": "Pass 2 (search summary). North-south, ~6.2 km; south start = Kordestan / Shahid Gomnam / Jalal Al-e Ahmad junction; reaches Niayesh in the north; crosses Hemmat, Hakim, Mollasadra, linked only by U-turns; north extension to Chamran under construction."
+    },
+    {
+      "id": "fa_wikifeqh_hemmat",
+      "title": "ویکی‌فقه: بزرگراه شهید همت (تهران)",
+      "url": "https://fa.wikifeqh.ir/بزرگراه_شهید_همت_(تهران)",
+      "used_for": "Pass 2 (search summary). ~18 km east-west; east end Zeinoddin, west end Kharrazi; crosses Haghani, Modares, Chamran."
+    },
+    {
+      "id": "fa_wikifeqh_yadegar",
+      "title": "ویکی‌فقه: بزرگراه یادگار امام (تهران)",
+      "url": "https://fa.wikifeqh.ir/بزرگراه_یادگار_امام_(تهران)",
+      "used_for": "Pass 2 (search summary). ~16 km from Seoul St (north) to Hashemi St (south-west); ~6 km east-west to Farahzad valley, ~10 km north-south."
+    },
+    {
+      "id": "fa_wikifeqh_parkway",
+      "title": "ویکی‌فقه: پارک وی (تهران)",
+      "url": "https://fa.wikifeqh.ir/پارک_وی_(تهران)",
+      "used_for": "Pass 2 (search summary). Chamran (old name Parkway) starts at the Parkway bridge as continuation of Modares and ends at Tohid Square; Tohid Tunnel joins Navvab Safavi."
+    },
+    {
+      "id": "wikidata_tohid",
+      "title": "Wikidata: Tohid Tunnel",
+      "url": "https://www.wikidata.org/wiki/Q7813271",
+      "used_for": "Pass 2 (search summary). Tunnel ~2.1 km carrying Chamran and Navvab."
+    },
+    {
+      "id": "fa_imam_ali_list",
+      "title": "Persian pages on Imam Ali Expressway (fa.wikipedia / wikifeqh / mrestate)",
+      "url": "https://fa.wikipedia.org/wiki/بزرگراه_امام_علی_(تهران)",
+      "used_for": "Pass 2 (search summary). Lists Babaei, Zeinoddin (Hemmat extension), Resalat, Mahallati, Besat, Azadegan, Azadegan Park, Shahr-e Rey as roads Imam Ali crosses. The summary did not say which of the pages listed it, so treat as unattributed."
+    },
+    {
+      "id": "aaroads_resalat_via_search",
+      "title": "AARoads wiki: Resalat Expressway",
+      "url": "https://wiki.aaroads.com/wiki/Resalat_Expressway",
+      "used_for": "Pass 2 (search summary, truncated). East-to-west list names Imam Ali Expressway."
+    },
+    {
+      "id": "hamshahri_hemmat_exits",
+      "title": "Hamshahri: Hemmat exits list",
+      "url": "https://www.hamshahrionline.ir/news/241794",
+      "used_for": "Pass 2 (search summary, undated). Exits west to east: Pazhuhesh, Peykan-shahr, Olympic Village, Jannatabad, Sattari, Ashrafi Esfahani, Yadegar-e Emam, Milad Tower, Sheikh Fazlollah."
+    },
+    {
+      "id": "abadis_sadr",
+      "title": "Abadis: Ayatollah Sadr Expressway",
+      "url": "https://abadis.ir/fatofa/بزرگراه-ایت-الله-صدر/",
+      "used_for": "Pass 2 (search summary). Says Sadr starts in the east at the junction of Imam Ali and Babaei, which conflicts with en-wiki (east end at Pasdaran)."
+    }
+  ]
+}

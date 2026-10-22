@@ -1,0 +1,17 @@
+{
+  "name": "tehran-highways",
+  "private": true,
+  "type": "module",
+  "description": "Learn Tehran's highway network as a graph with fixed positions. Phase 2: OSM-derived data, schematic map and explore mode.",
+  "scripts": {
+    "fetch:osm": "python3 tools/overture_fetch.py",
+    "derive:osm": "python3 tools/derive_osm.py",
+    "build:data": "node tools/build-data.mjs",
+    "validate": "node tools/validate.mjs",
+    "build:map": "node tools/build-map.mjs",
+    "render": "node tools/render-png.mjs",
+    "build:app": "node tools/build-app.mjs",
+    "test:app": "node tools/test-app.mjs",
+    "build": "npm run build:data && npm run validate && npm run build:map && npm run build:app && npm run render && npm run test:app"
+  }
+}

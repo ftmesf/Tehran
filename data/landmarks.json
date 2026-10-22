@@ -1,0 +1,60 @@
+{
+  "_about": "Memory anchors for Level 0. Coordinates come from Wikipedia; only Milad Tower is checked against OSM roads. elevation_m is for the data panel only.",
+  "rows": [
+    {
+      "id": "tajrish",
+      "node_id": "lm_tajrish",
+      "name_fa": "تجریش",
+      "name_en": "Tajrish",
+      "icon": "tree",
+      "hint_fa": "بالاترین نقطه، نزدیک کوه",
+      "elevation_m": 1615,
+      "verified": false,
+      "source": [
+        "wp_tajrish",
+        "wp_valiasr"
+      ]
+    },
+    {
+      "id": "milad",
+      "node_id": "lm_milad",
+      "name_fa": "برج میلاد",
+      "name_en": "Milad Tower",
+      "icon": "tower",
+      "hint_fa": "بین همت (بالا) و حکیم (پایین)",
+      "elevation_m": null,
+      "verified": true,
+      "source": [
+        "wp_milad",
+        "surfiran_milad"
+      ]
+    },
+    {
+      "id": "azadi",
+      "node_id": "lm_azadi",
+      "name_fa": "برج آزادی",
+      "name_en": "Azadi Tower",
+      "icon": "arch",
+      "hint_fa": "دروازه‌ی غرب شهر",
+      "elevation_m": null,
+      "verified": false,
+      "source": [
+        "wp_azadi"
+      ]
+    },
+    {
+      "id": "rahahan",
+      "node_id": "lm_rahahan",
+      "name_fa": "ایستگاه راه‌آهن",
+      "name_en": "Railway station (Rah-Ahan)",
+      "icon": "train",
+      "hint_fa": "پایین شهر، سر دیگر ولیعصر",
+      "elevation_m": 1117,
+      "verified": true,
+      "source": [
+        "wp_tehran_rail",
+        "wp_valiasr"
+      ]
+    }
+  ]
+}

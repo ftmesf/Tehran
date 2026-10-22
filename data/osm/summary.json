@@ -1,0 +1,912 @@
+{
+ "provenance": {
+  "source": "OpenStreetMap contributors (ODbL 1.0) via Overture Maps transportation segments",
+  "overture_release": "2026-10-21.0",
+  "bbox_lonlat": [
+   51.1,
+   35.55,
+   51.7,
+   35.9
+  ],
+  "classes": [
+   "motorway",
+   "trunk",
+   "primary"
+  ],
+  "note": "Main carriageways only: segments whose OSM name is exactly the highway name; bypass lanes (کنارگذر/کندرو) excluded."
+ },
+ "highways": {
+  "kordestan": {
+   "ew_extent_km": 1.3,
+   "ns_extent_km": 5.5,
+   "axis_angle_deg": 81,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.7751,
+     51.40579
+    ],
+    "south": [
+     35.72498,
+     51.39496
+    ],
+    "west": [
+     35.7287,
+     51.39419
+    ],
+    "east": [
+     35.774,
+     51.40853
+    ]
+   },
+   "osm_way_count": 23
+  },
+  "modares": {
+   "ew_extent_km": 0.8,
+   "ns_extent_km": 7.9,
+   "axis_angle_deg": 90,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.78993,
+     51.41908
+    ],
+    "south": [
+     35.71845,
+     51.42727
+    ],
+    "west": [
+     35.78971,
+     51.41906
+    ],
+    "east": [
+     35.77617,
+     51.42828
+    ]
+   },
+   "osm_way_count": 13
+  },
+  "sayyad": {
+   "ew_extent_km": 5.0,
+   "ns_extent_km": 10.4,
+   "axis_angle_deg": 67,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.80053,
+     51.49473
+    ],
+    "south": [
+     35.70632,
+     51.44035
+    ],
+    "west": [
+     35.70695,
+     51.44008
+    ],
+    "east": [
+     35.80052,
+     51.49485
+    ]
+   },
+   "osm_way_count": 37
+  },
+  "navvab": {
+   "ew_extent_km": 0.4,
+   "ns_extent_km": 4.4,
+   "axis_angle_deg": 95,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.69655,
+     51.37826
+    ],
+    "south": [
+     35.65684,
+     51.38242
+    ],
+    "west": [
+     35.69655,
+     51.37826
+    ],
+    "east": [
+     35.65684,
+     51.38242
+    ]
+   },
+   "osm_way_count": 28
+  },
+  "imam_ali": {
+   "ew_extent_km": 4.1,
+   "ns_extent_km": 23.4,
+   "axis_angle_deg": 81,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.80905,
+     51.49542
+    ],
+    "south": [
+     35.5977,
+     51.45433
+    ],
+    "west": [
+     35.5977,
+     51.45433
+    ],
+    "east": [
+     35.79947,
+     51.49961
+    ]
+   },
+   "osm_way_count": 64
+  },
+  "niayesh": {
+   "ew_extent_km": 6.8,
+   "ns_extent_km": 0.9,
+   "axis_angle_deg": 3,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.77869,
+     51.38564
+    ],
+    "south": [
+     35.77051,
+     51.33707
+    ],
+    "west": [
+     35.77051,
+     51.33707
+    ],
+    "east": [
+     35.77163,
+     51.41202
+    ]
+   },
+   "osm_way_count": 27
+  },
+  "hemmat": {
+   "ew_extent_km": 18.2,
+   "ns_extent_km": 0.9,
+   "axis_angle_deg": 180,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.75747,
+     51.26466
+    ],
+    "south": [
+     35.74913,
+     51.42906
+    ],
+    "west": [
+     35.75728,
+     51.26461
+    ],
+    "east": [
+     35.75686,
+     51.46591
+    ]
+   },
+   "osm_way_count": 107
+  },
+  "resalat": {
+   "ew_extent_km": 12.2,
+   "ns_extent_km": 2.4,
+   "axis_angle_deg": 172,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.74415,
+     51.40535
+    ],
+    "south": [
+     35.72289,
+     51.53879
+    ],
+    "west": [
+     35.74412,
+     51.40437
+    ],
+    "east": [
+     35.72289,
+     51.53879
+    ]
+   },
+   "osm_way_count": 92
+  },
+  "sadr": {
+   "ew_extent_km": 6.4,
+   "ns_extent_km": 2.0,
+   "axis_angle_deg": 12,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.79329,
+     51.46147
+    ],
+    "south": [
+     35.77538,
+     51.42793
+    ],
+    "west": [
+     35.77772,
+     51.42713
+    ],
+    "east": [
+     35.78606,
+     51.49804
+    ]
+   },
+   "osm_way_count": 47
+  },
+  "babaei": {
+   "ew_extent_km": 13.2,
+   "ns_extent_km": 6.6,
+   "axis_angle_deg": 154,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.78634,
+     51.49927
+    ],
+    "south": [
+     35.72688,
+     51.63672
+    ],
+    "west": [
+     35.78571,
+     51.4912
+    ],
+    "east": [
+     35.72692,
+     51.63689
+    ]
+   },
+   "osm_way_count": 49
+  },
+  "zeinoddin": {
+   "ew_extent_km": 11.5,
+   "ns_extent_km": 4.1,
+   "axis_angle_deg": 163,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.75943,
+     51.48101
+    ],
+    "south": [
+     35.72279,
+     51.58837
+    ],
+    "west": [
+     35.75668,
+     51.46586
+    ],
+    "east": [
+     35.7237,
+     51.59256
+    ]
+   },
+   "osm_way_count": 44
+  },
+  "hakim": {
+   "ew_extent_km": 8.9,
+   "ns_extent_km": 1.3,
+   "axis_angle_deg": 5,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.74412,
+     51.40437
+    ],
+    "south": [
+     35.73236,
+     51.3064
+    ],
+    "west": [
+     35.73236,
+     51.3064
+    ],
+    "east": [
+     35.74399,
+     51.40439
+    ]
+   },
+   "osm_way_count": 40
+  },
+  "chamran": {
+   "ew_extent_km": 3.2,
+   "ns_extent_km": 9.7,
+   "axis_angle_deg": 77,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.7939,
+     51.40267
+    ],
+    "south": [
+     35.70589,
+     51.37777
+    ],
+    "west": [
+     35.7061,
+     51.37752
+    ],
+    "east": [
+     35.79163,
+     51.41308
+    ]
+   },
+   "osm_way_count": 46
+  },
+  "yadegar": {
+   "ew_extent_km": 4.4,
+   "ns_extent_km": 11.9,
+   "axis_angle_deg": 90,
+   "rule_orientation": "NS",
+   "extremes": {
+    "north": [
+     35.79219,
+     51.39034
+    ],
+    "south": [
+     35.68468,
+     51.35442
+    ],
+    "west": [
+     35.78052,
+     51.34308
+    ],
+    "east": [
+     35.79,
+     51.39224
+    ]
+   },
+   "osm_way_count": 61
+  },
+  "azadegan": {
+   "ew_extent_km": 17.6,
+   "ns_extent_km": 8.4,
+   "axis_angle_deg": 157,
+   "rule_orientation": "EW",
+   "extremes": {
+    "north": [
+     35.68357,
+     51.23347
+    ],
+    "south": [
+     35.60787,
+     51.34778
+    ],
+    "west": [
+     35.67651,
+     51.231
+    ],
+    "east": [
+     35.62199,
+     51.42594
+    ]
+   },
+   "osm_way_count": 45
+  }
+ },
+ "junctions": {
+  "kordestan|niayesh": {
+   "shared_connectors": 1,
+   "primary": {
+    "lat_lon": [
+     35.774,
+     51.40853
+    ],
+    "min_dist_m": 0,
+    "crossing": true,
+    "ramp": true,
+    "samples": 26
+   },
+   "others": []
+  },
+  "kordestan|hemmat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.7514,
+     51.40414
+    ],
+    "min_dist_m": 1,
+    "crossing": true,
+    "ramp": true,
+    "samples": 63
+   },
+   "others": []
+  },
+  "kordestan|resalat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74367,
+     51.40168
+    ],
+    "min_dist_m": 247,
+    "crossing": false,
+    "ramp": true,
+    "samples": 4
+   },
+   "others": []
+  },
+  "kordestan|hakim": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.7433,
+     51.40173
+    ],
+    "min_dist_m": 6,
+    "crossing": true,
+    "ramp": true,
+    "samples": 58
+   },
+   "others": []
+  },
+  "modares|hemmat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74946,
+     51.42172
+    ],
+    "min_dist_m": 1,
+    "crossing": true,
+    "ramp": true,
+    "samples": 69
+   },
+   "others": []
+  },
+  "modares|resalat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74036,
+     51.42279
+    ],
+    "min_dist_m": 2,
+    "crossing": true,
+    "ramp": true,
+    "samples": 55
+   },
+   "others": []
+  },
+  "modares|sadr": {
+   "shared_connectors": 2,
+   "primary": {
+    "lat_lon": [
+     35.77538,
+     51.42793
+    ],
+    "min_dist_m": 0,
+    "crossing": true,
+    "ramp": true,
+    "samples": 43
+   },
+   "others": [
+    {
+     "lat_lon": [
+      35.77967,
+      51.42734
+     ],
+     "min_dist_m": 122,
+     "crossing": true,
+     "ramp": true,
+     "samples": 7
+    }
+   ]
+  },
+  "sayyad|imam_ali": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.79919,
+     51.49356
+    ],
+    "min_dist_m": 1,
+    "crossing": true,
+    "ramp": true,
+    "samples": 53
+   },
+   "others": [
+    {
+     "lat_lon": [
+      35.79579,
+      51.48979
+     ],
+     "min_dist_m": 248,
+     "crossing": true,
+     "ramp": false,
+     "samples": 3
+    }
+   ]
+  },
+  "sayyad|hemmat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.75682,
+     51.46552
+    ],
+    "min_dist_m": 4,
+    "crossing": true,
+    "ramp": true,
+    "samples": 55
+   },
+   "others": []
+  },
+  "sayyad|resalat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74116,
+     51.46074
+    ],
+    "min_dist_m": 3,
+    "crossing": true,
+    "ramp": true,
+    "samples": 58
+   },
+   "others": []
+  },
+  "sayyad|sadr": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.7883,
+     51.48473
+    ],
+    "min_dist_m": 2,
+    "crossing": true,
+    "ramp": true,
+    "samples": 55
+   },
+   "others": []
+  },
+  "sayyad|zeinoddin": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.75664,
+     51.46551
+    ],
+    "min_dist_m": 32,
+    "crossing": false,
+    "ramp": true,
+    "samples": 54
+   },
+   "others": []
+  },
+  "imam_ali|resalat": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.73755,
+     51.4833
+    ],
+    "min_dist_m": 6,
+    "crossing": true,
+    "ramp": true,
+    "samples": 57
+   },
+   "others": []
+  },
+  "imam_ali|sadr": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.78558,
+     51.49142
+    ],
+    "min_dist_m": 25,
+    "crossing": false,
+    "ramp": true,
+    "samples": 58
+   },
+   "others": []
+  },
+  "imam_ali|babaei": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.7858,
+     51.49152
+    ],
+    "min_dist_m": 1,
+    "crossing": true,
+    "ramp": true,
+    "samples": 57
+   },
+   "others": []
+  },
+  "imam_ali|zeinoddin": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.75903,
+     51.48449
+    ],
+    "min_dist_m": 2,
+    "crossing": true,
+    "ramp": true,
+    "samples": 59
+   },
+   "others": []
+  },
+  "niayesh|chamran": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.77658,
+     51.39104
+    ],
+    "min_dist_m": 9,
+    "crossing": false,
+    "ramp": true,
+    "samples": 25
+   },
+   "others": []
+  },
+  "niayesh|yadegar": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.77131,
+     51.34557
+    ],
+    "min_dist_m": 171,
+    "crossing": false,
+    "ramp": true,
+    "samples": 36
+   },
+   "others": []
+  },
+  "hemmat|zeinoddin": {
+   "shared_connectors": 2,
+   "primary": {
+    "lat_lon": [
+     35.75686,
+     51.46591
+    ],
+    "min_dist_m": 0,
+    "crossing": true,
+    "ramp": true,
+    "samples": 26
+   },
+   "others": []
+  },
+  "hemmat|chamran": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.75026,
+     51.38641
+    ],
+    "min_dist_m": 24,
+    "crossing": false,
+    "ramp": true,
+    "samples": 29
+   },
+   "others": []
+  },
+  "hemmat|yadegar": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.75117,
+     51.34828
+    ],
+    "min_dist_m": 1,
+    "crossing": true,
+    "ramp": false,
+    "samples": 43
+   },
+   "others": []
+  },
+  "resalat|hakim": {
+   "shared_connectors": 2,
+   "primary": {
+    "lat_lon": [
+     35.74399,
+     51.40439
+    ],
+    "min_dist_m": 0,
+    "crossing": true,
+    "ramp": true,
+    "samples": 26
+   },
+   "others": []
+  },
+  "sadr|babaei": {
+   "shared_connectors": 3,
+   "primary": {
+    "lat_lon": [
+     35.78606,
+     51.49804
+    ],
+    "min_dist_m": 0,
+    "crossing": true,
+    "ramp": true,
+    "samples": 50
+   },
+   "others": []
+  },
+  "hakim|chamran": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74283,
+     51.38379
+    ],
+    "min_dist_m": 2,
+    "crossing": true,
+    "ramp": true,
+    "samples": 79
+   },
+   "others": [
+    {
+     "lat_lon": [
+      35.74351,
+      51.3871
+     ],
+     "min_dist_m": 231,
+     "crossing": true,
+     "ramp": true,
+     "samples": 2
+    }
+   ]
+  },
+  "hakim|yadegar": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.74091,
+     51.34682
+    ],
+    "min_dist_m": 9,
+    "crossing": true,
+    "ramp": true,
+    "samples": 48
+   },
+   "others": []
+  },
+  "chamran|yadegar": {
+   "shared_connectors": 0,
+   "primary": {
+    "lat_lon": [
+     35.79002,
+     51.39235
+    ],
+    "min_dist_m": 10,
+    "crossing": false,
+    "ramp": true,
+    "samples": 68
+   },
+   "others": []
+  }
+ },
+ "continuations": {
+  "hemmat|zeinoddin": {
+   "gap_m": 0,
+   "lat_lon": [
+    35.75686,
+    51.46591
+   ]
+  },
+  "hakim|resalat": {
+   "gap_m": 0,
+   "lat_lon": [
+    35.74412,
+    51.40437
+   ]
+  },
+  "sadr|babaei": {
+   "gap_m": 0,
+   "lat_lon": [
+    35.78606,
+    51.49804
+   ]
+  },
+  "niayesh|sadr": {
+   "gap_m": 1496,
+   "lat_lon": [
+    35.7735,
+    51.41998
+   ]
+  },
+  "chamran|navvab": {
+   "gap_m": 1033,
+   "lat_lon": [
+    35.70122,
+    51.37801
+   ]
+  },
+  "chamran|modares": {
+   "gap_m": 574,
+   "lat_lon": [
+    35.79078,
+    51.41608
+   ]
+  },
+  "hemmat|khorrazi": {
+   "gap_m": 0,
+   "lat_lon": [
+    35.75728,
+    51.26461
+   ]
+  }
+ },
+ "landmark_checks": {
+  "milad": {
+   "all_ok": true,
+   "box": {
+    "hemmat": {
+     "expected_side": "N",
+     "actual_side": "N",
+     "distance_m": 528,
+     "ok": true
+    },
+    "hakim": {
+     "expected_side": "S",
+     "actual_side": "S",
+     "distance_m": 370,
+     "ok": true
+    },
+    "chamran": {
+     "expected_side": "E",
+     "actual_side": "E",
+     "distance_m": 750,
+     "ok": true
+    },
+    "sheikh_fazlollah": {
+     "expected_side": "W",
+     "actual_side": "W",
+     "distance_m": 456,
+     "ok": true
+    }
+   }
+  },
+  "tajrish": {
+   "all_ok": false,
+   "osm_square_centre": [
+    35.80699,
+    51.42883
+   ],
+   "wikipedia_coords": [
+    35.8056,
+    51.4381
+   ],
+   "distance_m": 852
+  },
+  "azadi": {
+   "all_ok": false,
+   "osm_square_centre": [
+    35.70331,
+    51.34858
+   ],
+   "wikipedia_coords": [
+    35.6994,
+    51.3378
+   ],
+   "distance_m": 1066
+  },
+  "rahahan": {
+   "all_ok": true,
+   "osm_square_centre": [
+    35.6593,
+    51.39801
+   ],
+   "wikipedia_coords": [
+    35.658,
+    51.398
+   ],
+   "distance_m": 144
+  }
+ }
+}
