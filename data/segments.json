@@ -1,0 +1,486 @@
+{
+  "_about": "Edges. direction = compass direction from from_node to to_node on the schematic. NS highways listed north->south, EW west->east.",
+  "rows": [
+    {
+      "id": "s_kordestan_1",
+      "highway_id": "kordestan",
+      "from_node": "n_nia_kord",
+      "to_node": "n_hem_kord",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_kordestan_2",
+      "highway_id": "kordestan",
+      "from_node": "n_hem_kord",
+      "to_node": "n_kord_hak_res",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_kordestan_3",
+      "highway_id": "kordestan",
+      "from_node": "n_kord_hak_res",
+      "to_node": "n_kord_s",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_modares_1",
+      "highway_id": "modares",
+      "from_node": "n_parkway",
+      "to_node": "n_sadr_mod",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_modares_2",
+      "highway_id": "modares",
+      "from_node": "n_sadr_mod",
+      "to_node": "n_fajr",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_modares_3",
+      "highway_id": "modares",
+      "from_node": "n_fajr",
+      "to_node": "n_res_mod",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_modares_4",
+      "highway_id": "modares",
+      "from_node": "n_res_mod",
+      "to_node": "n_haft_tir",
+      "direction": "S",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_sayyad_1",
+      "highway_id": "sayyad",
+      "from_node": "n_bab_say",
+      "to_node": "n_zei_say",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_sayyad_2",
+      "highway_id": "sayyad",
+      "from_node": "n_zei_say",
+      "to_node": "n_sayyad_ic",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_sayyad_3",
+      "highway_id": "sayyad",
+      "from_node": "n_sayyad_ic",
+      "to_node": "n_sepah",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_navvab_1",
+      "highway_id": "navvab",
+      "from_node": "n_tohid",
+      "to_node": "n_nav_s",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_imam_ali_1",
+      "highway_id": "imam_ali",
+      "from_node": "n_artesh",
+      "to_node": "n_bab_imam",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_imam_ali_2",
+      "highway_id": "imam_ali",
+      "from_node": "n_bab_imam",
+      "to_node": "n_zei_imam",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_niayesh_1",
+      "highway_id": "niayesh",
+      "from_node": "n_nia_w",
+      "to_node": "n_nia_yad",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_niayesh_2",
+      "highway_id": "niayesh",
+      "from_node": "n_nia_yad",
+      "to_node": "n_velayat",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_niayesh_3",
+      "highway_id": "niayesh",
+      "from_node": "n_velayat",
+      "to_node": "n_nia_kord",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_niayesh_4",
+      "highway_id": "niayesh",
+      "from_node": "n_nia_kord",
+      "to_node": "n_nia_vali",
+      "direction": "E",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_niayesh_5",
+      "highway_id": "niayesh",
+      "from_node": "n_nia_vali",
+      "to_node": "n_sadr_mod",
+      "direction": "E",
+      "order_on_highway": 5,
+      "kind": "tunnel",
+      "verified": false,
+      "note": "Tunnel linking Niayesh east end to Sadr."
+    },
+    {
+      "id": "s_hemmat_1",
+      "highway_id": "hemmat",
+      "from_node": "n_hem_w",
+      "to_node": "n_hem_yad",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hemmat_2",
+      "highway_id": "hemmat",
+      "from_node": "n_hem_yad",
+      "to_node": "n_hem_cham",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hemmat_3",
+      "highway_id": "hemmat",
+      "from_node": "n_hem_cham",
+      "to_node": "n_hem_kord",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hemmat_4",
+      "highway_id": "hemmat",
+      "from_node": "n_hem_kord",
+      "to_node": "n_fajr",
+      "direction": "E",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hemmat_5",
+      "highway_id": "hemmat",
+      "from_node": "n_fajr",
+      "to_node": "n_pas_h",
+      "direction": "E",
+      "order_on_highway": 5,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_resalat_1",
+      "highway_id": "resalat",
+      "from_node": "n_kord_hak_res",
+      "to_node": "n_res_mod",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_resalat_2",
+      "highway_id": "resalat",
+      "from_node": "n_res_mod",
+      "to_node": "n_sayyad_ic",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_resalat_3",
+      "highway_id": "resalat",
+      "from_node": "n_sayyad_ic",
+      "to_node": "n_res_e",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_sadr_1",
+      "highway_id": "sadr",
+      "from_node": "n_sadr_mod",
+      "to_node": "n_pas_n",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_babaei_1",
+      "highway_id": "babaei",
+      "from_node": "n_pas_n",
+      "to_node": "n_bab_say",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_babaei_2",
+      "highway_id": "babaei",
+      "from_node": "n_bab_say",
+      "to_node": "n_bab_imam",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_babaei_3",
+      "highway_id": "babaei",
+      "from_node": "n_bab_imam",
+      "to_node": "n_bab_e",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_zeinoddin_1",
+      "highway_id": "zeinoddin",
+      "from_node": "n_pas_h",
+      "to_node": "n_zei_say",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_zeinoddin_2",
+      "highway_id": "zeinoddin",
+      "from_node": "n_zei_say",
+      "to_node": "n_zei_imam",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hakim_1",
+      "highway_id": "hakim",
+      "from_node": "n_hak_w",
+      "to_node": "n_hak_yad",
+      "direction": "E",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hakim_2",
+      "highway_id": "hakim",
+      "from_node": "n_hak_yad",
+      "to_node": "n_hak_cham",
+      "direction": "E",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_hakim_3",
+      "highway_id": "hakim",
+      "from_node": "n_hak_cham",
+      "to_node": "n_kord_hak_res",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_chamran_1",
+      "highway_id": "chamran",
+      "from_node": "n_parkway",
+      "to_node": "n_seoul",
+      "direction": "W",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_chamran_2",
+      "highway_id": "chamran",
+      "from_node": "n_seoul",
+      "to_node": "n_velayat",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_chamran_3",
+      "highway_id": "chamran",
+      "from_node": "n_velayat",
+      "to_node": "n_hem_cham",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_chamran_4",
+      "highway_id": "chamran",
+      "from_node": "n_hem_cham",
+      "to_node": "n_hak_cham",
+      "direction": "S",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_chamran_5",
+      "highway_id": "chamran",
+      "from_node": "n_hak_cham",
+      "to_node": "n_tohid",
+      "direction": "S",
+      "order_on_highway": 5,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_yadegar_1",
+      "highway_id": "yadegar",
+      "from_node": "n_seoul",
+      "to_node": "n_yad_bend",
+      "direction": "W",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_yadegar_2",
+      "highway_id": "yadegar",
+      "from_node": "n_yad_bend",
+      "to_node": "n_nia_yad",
+      "direction": "S",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_yadegar_3",
+      "highway_id": "yadegar",
+      "from_node": "n_nia_yad",
+      "to_node": "n_hem_yad",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_yadegar_4",
+      "highway_id": "yadegar",
+      "from_node": "n_hem_yad",
+      "to_node": "n_hak_yad",
+      "direction": "S",
+      "order_on_highway": 4,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_yadegar_5",
+      "highway_id": "yadegar",
+      "from_node": "n_hak_yad",
+      "to_node": "n_yad_s",
+      "direction": "S",
+      "order_on_highway": 5,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_azadegan_1",
+      "highway_id": "azadegan",
+      "from_node": "n_hem_w",
+      "to_node": "n_azg_bend1",
+      "direction": "S",
+      "order_on_highway": 1,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_azadegan_2",
+      "highway_id": "azadegan",
+      "from_node": "n_azg_bend1",
+      "to_node": "n_azg_bend2",
+      "direction": "SE",
+      "order_on_highway": 2,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_azadegan_3",
+      "highway_id": "azadegan",
+      "from_node": "n_azg_bend2",
+      "to_node": "n_basij",
+      "direction": "E",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    }
+  ]
+}

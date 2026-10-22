@@ -1,0 +1,12 @@
+{
+  "name": "tehran-highways",
+  "private": true,
+  "type": "module",
+  "description": "Learn Tehran's highway network as a graph with fixed positions. Phase 1: data + static schematic.",
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "build:map": "node tools/build-map.mjs",
+    "render": "node tools/render-png.mjs",
+    "phase1": "npm run validate && npm run build:map && npm run render"
+  }
+}

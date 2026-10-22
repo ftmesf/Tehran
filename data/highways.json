@@ -1,0 +1,200 @@
+{
+  "_about": "One row per highway. orientation: NS | EW | DIAGONAL | MIXED. level = lesson that introduces it. All rows verified:false until checked against a real map (see REVIEW.md).",
+  "rows": [
+    {
+      "id": "kordestan",
+      "name_fa": "کردستان",
+      "name_en": "Kordestan",
+      "orientation": "NS",
+      "color": "#1565C0",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_kordestan"
+      ]
+    },
+    {
+      "id": "modares",
+      "name_fa": "مدرس",
+      "name_en": "Modares",
+      "orientation": "NS",
+      "color": "#0D47A1",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_modarres"
+      ],
+      "name_en_alt": "Modarres"
+    },
+    {
+      "id": "sayyad",
+      "name_fa": "صیاد شیرازی",
+      "name_en": "Sayyad Shirazi",
+      "orientation": "NS",
+      "color": "#1E88E5",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_sayyad"
+      ]
+    },
+    {
+      "id": "navvab",
+      "name_fa": "نواب",
+      "name_en": "Navvab",
+      "orientation": "NS",
+      "color": "#2E7DD7",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_navvab"
+      ],
+      "note": "Continuation of Chamran south of Tohid Tunnel."
+    },
+    {
+      "id": "imam_ali",
+      "name_fa": "امام علی",
+      "name_en": "Imam Ali",
+      "orientation": "NS",
+      "color": "#0277BD",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_imam_ali",
+        "wp_babayi",
+        "wp_zeinoddin"
+      ],
+      "note": "Route south of Zeinoddin (to Ray) is not drawn: no junction list found."
+    },
+    {
+      "id": "niayesh",
+      "name_fa": "نیایش",
+      "name_en": "Niayesh",
+      "orientation": "EW",
+      "color": "#D84315",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_niayesh"
+      ],
+      "official_name_fa": "آیت‌الله هاشمی رفسنجانی",
+      "official_name_en": "Hashemi Rafsanjani Expressway"
+    },
+    {
+      "id": "hemmat",
+      "name_fa": "همت",
+      "name_en": "Hemmat",
+      "orientation": "EW",
+      "color": "#EF6C00",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_hemmat"
+      ]
+    },
+    {
+      "id": "resalat",
+      "name_fa": "رسالت",
+      "name_en": "Resalat",
+      "orientation": "EW",
+      "color": "#F59E0B",
+      "level": 1,
+      "verified": false,
+      "source": [
+        "wp_resalat"
+      ],
+      "official_name_fa": "سپهبد قاسم سلیمانی",
+      "official_name_en": "Qasem Soleimani Expressway"
+    },
+    {
+      "id": "sadr",
+      "name_fa": "صدر",
+      "name_en": "Sadr",
+      "orientation": "EW",
+      "color": "#E64A19",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_sadr"
+      ]
+    },
+    {
+      "id": "babaei",
+      "name_fa": "بابایی",
+      "name_en": "Babaei",
+      "orientation": "EW",
+      "color": "#BF360C",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_babayi"
+      ],
+      "name_en_alt": "Babayi"
+    },
+    {
+      "id": "zeinoddin",
+      "name_fa": "زین‌الدین",
+      "name_en": "Zeinoddin",
+      "orientation": "EW",
+      "color": "#F57C00",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_zeinoddin",
+        "wp_hemmat"
+      ],
+      "note": "Continuation of Hemmat east of Pasdaran. Not in the original candidate list."
+    },
+    {
+      "id": "hakim",
+      "name_fa": "حکیم",
+      "name_en": "Hakim",
+      "orientation": "EW",
+      "color": "#FB8C00",
+      "level": 2,
+      "verified": false,
+      "source": [
+        "wp_hakim"
+      ]
+    },
+    {
+      "id": "chamran",
+      "name_fa": "چمران",
+      "name_en": "Chamran",
+      "orientation": "MIXED",
+      "color": "#7B1FA2",
+      "level": 3,
+      "verified": false,
+      "source": [
+        "wp_chamran"
+      ],
+      "note": "Mostly north-south, but its north end turns west-east to Parkway."
+    },
+    {
+      "id": "yadegar",
+      "name_fa": "یادگار امام",
+      "name_en": "Yadegar-e Emam",
+      "orientation": "MIXED",
+      "color": "#9C27B0",
+      "level": 3,
+      "verified": false,
+      "source": [
+        "wp_yadegar"
+      ],
+      "note": "West-east section at the top, then north-south."
+    },
+    {
+      "id": "azadegan",
+      "name_fa": "آزادگان",
+      "name_en": "Azadegan",
+      "orientation": "MIXED",
+      "color": "#6A1B9A",
+      "level": 3,
+      "verified": false,
+      "source": [
+        "wp_azadegan"
+      ],
+      "note": "Ring road: west side runs north-south, south side runs west-east. Ends are NW and SE."
+    }
+  ]
+}
