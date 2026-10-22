@@ -2,7 +2,9 @@
 
 A small learning app that teaches Tehran's highway network as a **graph with fixed positions**. North is always up, and the Alborz mountains are always at the top.
 
-**Status: Phase 2 (explore mode).** Open `index.html` (one self-contained file, no server needed): click any highway, interchange, segment or landmark and the side panel shows the table rows and the SQL behind it. The data is derived from OpenStreetMap; 109 of 116 rows are `verified: true`. What is still open is in [`REVIEW.md`](REVIEW.md). Quizzes (Phase 3) and routing (Phase 4) are not built yet.
+**Status: Phases 1–3 done (data, schematic map, explore mode, Levels 0–3 with quizzes). Phase 4 (routing) and the Leaflet tile map are not built yet.** Open `index.html` (one self-contained file, no server needed). The data is derived from OpenStreetMap; 109 of 116 rows are `verified: true`. What is still open is in [`REVIEW.md`](REVIEW.md).
+
+**How it teaches:** Level 0 (compass: mountains, 4 directions, 4 landmarks) → 1 (three vertical and three horizontal highways, one at a time) → 2 (intersections as JOINs) → 3 (edge cases). Each level is a few short cards, then a quiz that answers *on the map* with a car driving the answer. Questions are generated from the data tables; a wrong answer comes back a few questions later; about 80% unlocks the next level. The Developer view (table rows + SQL) is behind the `{ }` button. The 🗺 button (Level 2 and up, and explore mode) redraws the highways with their real shapes so the schematic can be compared with reality. The 'open all levels' link at the bottom of the map is a reviewer shortcut.
 
 ## What is here
 
@@ -16,7 +18,7 @@ A small learning app that teaches Tehran's highway network as a **graph with fix
 | `data/osm/summary.json` | Junctions, name changes, line ends and landmark checks derived from OSM |
 | `data/osm/highways.geojson` | The real carriageways of the 15 highways with OSM way ids (for the optional real-map view) |
 | `index.html` | **The app (explore mode).** Generated: map + data + CSS + JS in one file. Coordinates are stripped from the embedded data. |
-| `app/` | Source of the app: `app.js`, `app.css`, `index.template.html` |
+| `app/` | Source of the app: `core.js` (data + map drawing), `real.js` (real-shape view), `explore.js`, `lessons.js` (levels + quiz generators), `main.js`, `app.css`, `index.template.html` |
 | `map/schematic.svg` | The static schematic map (follows light/dark theme) |
 | `map/schematic-full.png`, `-25pct.png`, `-full-dark.png` | Squint-test exports |
 
@@ -32,7 +34,7 @@ npm run validate     # integrity + "the drawing never contradicts the real coord
 npm run build:map    # data -> map/schematic.svg
 npm run build:app    # data + svg + app/ -> index.html
 npm run render       # svg -> PNGs (needs Playwright + Chromium)
-npm run test:app     # headless-browser smoke test of explore mode (needs Playwright + Chromium)
+npm run test:app     # headless-browser test: quiz answers vs the real OSM coordinates, learner flow, phone layout (needs Playwright + Chromium)
 npm run build        # data, validate, map, app, render, test
 ```
 

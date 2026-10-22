@@ -7,19 +7,24 @@
 <title>بزرگراه‌های تهران — Tehran Highways</title>
 <style>/*CSS*/</style>
 </head>
-<body>
+<body data-mode="learn">
 <header class="top">
-  <div class="brand"><b>بزرگراه‌های تهران</b><small>Tehran Highways for Backend Developers · explore</small></div>
-  <div class="chips" id="chips" role="group" aria-label="فیلتر بزرگراه‌ها"></div>
+  <div class="brand"><b>بزرگراه‌های تهران</b><small>Tehran Highways for Backend Developers</small></div>
   <div class="tools">
-    <button class="tool" id="zout" aria-label="کوچک‌تر" title="کوچک‌تر">−</button>
-    <button class="tool" id="zin" aria-label="بزرگ‌تر" title="بزرگ‌تر">+</button>
+    <button class="tool" id="realbtn" hidden aria-pressed="false" title="شکل واقعی / شماتیک" aria-label="شکل واقعی یا شماتیک">🗺</button>
+    <button class="tool" id="devbtn" aria-pressed="false" title="نمای برنامه‌نویس (جدول و SQL)" aria-label="نمای برنامه‌نویس">{ }</button>
     <button class="tool" id="theme" aria-label="روشن / تاریک" title="روشن / تاریک">◐</button>
   </div>
+  <nav class="levels" id="levels" aria-label="درس‌ها"></nav>
 </header>
 <main>
-  <div id="map-pane"><div id="map-scroll"><!--SVG--></div></div>
-  <aside id="panel" aria-live="polite" aria-label="نمای برنامه‌نویس"></aside>
+  <div id="map-pane">
+    <div id="map-scroll"><!--SVG--></div>
+    <div class="mapbtns"><button class="tool" id="zin" aria-label="بزرگ‌تر">+</button><button class="tool" id="zout" aria-label="کوچک‌تر">−</button><button class="tool" id="zall" aria-label="کل نقشه" title="کل نقشه">⌂</button></div>
+    <div id="real-note" hidden><b>شکل واقعی</b> · شمال هنوز بالاست؛ فاصله‌ها و خمیدگی‌ها واقعی‌اند. نقشه‌ی شماتیک فقط <b>ترتیب</b> را نگه می‌دارد. (موقعیت تجریش و آزادی تأییدنشده است.)</div>
+    <div class="credit">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <button id="openall" class="linkbtn" hidden>باز کردن همه‌ی درس‌ها (بازبینی)</button></div>
+  </div>
+  <aside id="panel" aria-live="polite" aria-label="درس"></aside>
 </main>
 <script id="data" type="application/json">/*DATA*/</script>
 <script>/*JS*/</script>

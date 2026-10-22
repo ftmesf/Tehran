@@ -115,7 +115,7 @@ function nodeLayer() {
 // ---------- invisible click targets for the interactive app (transparent, so PNG exports are unchanged) ----------
 function segmentHits() {
   return `<g id="hit-segments">` + segments.map(s =>
-    `<path d="${pathFor([s.from_node, s.to_node])}" class="hit" data-segment="${s.id}"/>`).join('') + `</g>`;
+    `<path d="${pathFor([s.from_node, s.to_node])}" class="hit" data-segment="${s.id}" data-highway="${s.highway_id}"/>`).join('') + `</g>`;
 }
 
 function highwayLabels() {
@@ -123,10 +123,10 @@ function highwayLabels() {
     const [x, y] = LABEL_AT[h.id];
     const w = Math.max(100, [...h.name_fa].length * 12 + 44, h.name_en.length * 7 + 28);
     const special = h.orientation === 'MIXED' || h.orientation === 'DIAGONAL';
-    return `<g class="hw-label" data-highway="${h.id}">
-      <rect x="${x - w / 2}" y="${y - 30}" width="${w}" height="60" rx="30" fill="${h.color}" class="pill ${special ? 'pill-special' : ''}"/>
-      <text x="${x}" y="${y + 2}" class="pill-fa" text-anchor="middle" direction="rtl">${esc(h.name_fa)}</text>
-      <text x="${x}" y="${y + 21}" class="pill-en" text-anchor="middle">${esc(h.name_en)}</text>
+    return `<g class="hw-label" data-highway="${h.id}" transform="translate(${x} ${y})">
+      <rect x="${-w / 2}" y="-30" width="${w}" height="60" rx="30" fill="${h.color}" class="pill ${special ? 'pill-special' : ''}"/>
+      <text x="0" y="2" class="pill-fa" text-anchor="middle" direction="rtl">${esc(h.name_fa)}</text>
+      <text x="0" y="21" class="pill-en" text-anchor="middle">${esc(h.name_en)}</text>
     </g>`;
   }).join('') + `</g>`;
 }
@@ -150,12 +150,12 @@ function landmarkLayer() {
   return `<g id="landmarks">` + landmarks.map(l => {
     const n = nodeById.get(l.node_id);
     const side = LANDMARK_LABEL[l.id];
-    // With direction=rtl, "end" is the left edge of the text.
-    const [tx, ty, anchorFa, anchorEn] = side === 'right' ? [n.x + 52, n.y - 2, 'end', 'start'] : [n.x, n.y + 66, 'middle', 'middle'];
+    // With direction=rtl, "end" is the left edge of the text. Coordinates are relative to the badge centre.
+    const [tx, ty, anchorFa, anchorEn] = side === 'right' ? [52, -2, 'end', 'start'] : [0, 66, 'middle', 'middle'];
     return `<g class="landmark" data-landmark="${l.id}" transform="translate(${n.x} ${n.y})">
-        <circle r="40" class="lm-badge"/>${ICONS[l.icon]}</g>
-      <text x="${tx}" y="${ty}" class="lm-fa" text-anchor="${anchorFa}" direction="rtl">${esc(l.name_fa)}</text>
-      <text x="${tx}" y="${ty + 20}" class="lm-en" text-anchor="${anchorEn}">${esc(l.name_en)}</text>`;
+        <circle r="40" class="lm-badge"/>${ICONS[l.icon]}
+        <text x="${tx}" y="${ty}" class="lm-fa" text-anchor="${anchorFa}" direction="rtl">${esc(l.name_fa)}</text>
+        <text x="${tx}" y="${ty + 20}" class="lm-en" text-anchor="${anchorEn}">${esc(l.name_en)}</text></g>`;
   }).join('') + `</g>`;
 }
 
