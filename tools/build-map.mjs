@@ -99,8 +99,8 @@ function highwayLayers() {
     for (const s of segs.filter(s => s.kind === 'tunnel'))
       tunnels.push(`<path d="${pathFor([s.from_node, s.to_node])}" class="tunnel"/>`);
   }
-  // Unknown continuation of Imam Ali south of Zeinoddin: drawn as a fading question, not as a road.
-  const z = nodeById.get('n_zei_imam');
+  // Unknown continuation of Imam Ali south of Resalat: drawn as a fading question, not as a road.
+  const z = nodeById.get('n_res_imam');
   const stub = `<path d="M${z.x} ${z.y + 14} L${z.x} ${z.y + 90}" class="unknown-stub"/>
     <circle cx="${z.x}" cy="${z.y + 112}" r="17" class="unknown-badge"/><text x="${z.x}" y="${z.y + 121}" class="unknown-q" text-anchor="middle">؟</text>`;
   return `<g id="highways">${casings.join('')}${outlines.join('')}${cores.join('')}${tunnels.join('')}${stub}</g>`;

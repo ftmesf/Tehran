@@ -132,6 +132,16 @@
       "verified": false
     },
     {
+      "id": "s_imam_ali_3",
+      "highway_id": "imam_ali",
+      "from_node": "n_zei_imam",
+      "to_node": "n_res_imam",
+      "direction": "S",
+      "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
       "id": "s_niayesh_1",
       "highway_id": "niayesh",
       "from_node": "n_nia_w",
@@ -256,9 +266,19 @@
       "id": "s_resalat_3",
       "highway_id": "resalat",
       "from_node": "n_sayyad_ic",
-      "to_node": "n_res_e",
+      "to_node": "n_res_imam",
       "direction": "E",
       "order_on_highway": 3,
+      "kind": "road",
+      "verified": false
+    },
+    {
+      "id": "s_resalat_4",
+      "highway_id": "resalat",
+      "from_node": "n_res_imam",
+      "to_node": "n_res_e",
+      "direction": "E",
+      "order_on_highway": 4,
       "kind": "road",
       "verified": false
     },

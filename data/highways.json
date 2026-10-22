@@ -10,8 +10,10 @@
       "level": 1,
       "verified": false,
       "source": [
-        "wp_kordestan"
-      ]
+        "wp_kordestan",
+        "fa_wikifeqh_kordestan"
+      ],
+      "note": "fa.wikifeqh: links to Hemmat and Hakim only via U-turns. North extension to Chamran is under construction (not drawn)."
     },
     {
       "id": "modares",
@@ -47,7 +49,8 @@
       "level": 2,
       "verified": false,
       "source": [
-        "wp_navvab"
+        "wp_navvab",
+        "wikidata_tohid"
       ],
       "note": "Continuation of Chamran south of Tohid Tunnel."
     },
@@ -64,7 +67,7 @@
         "wp_babayi",
         "wp_zeinoddin"
       ],
-      "note": "Route south of Zeinoddin (to Ray) is not drawn: no junction list found."
+      "note": "Drawn down to Resalat only. One unattributed Persian summary says it goes on to cross Mahallati, Besat and Azadegan toward Shahr-e Rey; not drawn until a source is named."
     },
     {
       "id": "niayesh",
@@ -89,7 +92,9 @@
       "level": 1,
       "verified": false,
       "source": [
-        "wp_hemmat"
+        "wp_hemmat",
+        "fa_wikifeqh_hemmat",
+        "hamshahri_hemmat_exits"
       ]
     },
     {
@@ -115,7 +120,8 @@
       "level": 2,
       "verified": false,
       "source": [
-        "wp_sadr"
+        "wp_sadr",
+        "abadis_sadr"
       ]
     },
     {
@@ -166,7 +172,8 @@
       "level": 3,
       "verified": false,
       "source": [
-        "wp_chamran"
+        "wp_chamran",
+        "fa_wikifeqh_parkway"
       ],
       "note": "Mostly north-south, but its north end turns west-east to Parkway."
     },
@@ -179,7 +186,8 @@
       "level": 3,
       "verified": false,
       "source": [
-        "wp_yadegar"
+        "wp_yadegar",
+        "fa_wikifeqh_yadegar"
       ],
       "note": "West-east section at the top, then north-south."
     },

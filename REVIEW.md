@@ -71,7 +71,7 @@ South row (Hakim / Resalat):
 - [ ] 2.20 Does Resalat cross **Modares**? — `n_res_mod` — [Modarres]
 - [ ] 2.21 Does Resalat cross **Sayyad Shirazi** at the Sayyad Shirazi Interchange? — `n_sayyad_ic` — [Sayyad]
 - [ ] 2.22 Does Resalat **end** (east end) at Yasini Expressway? — `n_res_e` — [Resalat]
-- [ ] 2.23 Does Resalat cross **Imam Ali**? (**Not in the data.** I found no source either way.) — no row yet
+- [ ] 2.23 Does Resalat cross **Imam Ali**? **Pass 2: added** as `n_res_imam`. AARoads' Resalat list names Imam Ali and a Persian summary lists Resalat among Imam Ali's crossings (both search summaries) — [AARoads](https://wiki.aaroads.com/wiki/Resalat_Expressway)
 
 Other:
 - [ ] 2.24 Is **Parkway** the meeting point of Chamran's north end, Modares's north end and Valiasr St? — `n_parkway` — [Chamran], [Modarres]
@@ -126,7 +126,7 @@ Coordinates are stored in `nodes.json` (hidden from the learner). They are used 
 
 ## 6. Things I could not find (open items)
 
-- 6.1 Imam Ali's route south of Zeinoddin, and whether it crosses Resalat.
+- 6.1 Imam Ali's route south of Resalat. One unattributed Persian summary says it crosses Mahallati, Besat and Azadegan on the way to Shahr-e Rey. Not drawn until a page is named.
 - 6.2 Hemmat's true west end (Kharrazi vs Azadegan).
 - 6.3 Which highway (if any) Azadegan meets besides Hemmat, among the ones in this dataset.
 - 6.4 Persian names of the interchanges (`name_fa` of `n_*` rows) are my wording, for example "تقاطع فجر" and "پل ولایت". Please correct any that people do not actually use.
@@ -138,6 +138,32 @@ Coordinates are stored in `nodes.json` (hidden from the learner). They are used 
 - 7.2 Rows are evenly spaced. Real gaps between Niayesh, Hemmat and Hakim are not equal.
 - 7.3 Valiasr St and Sheikh Fazlollah Nouri are **not** drawn, even though they help place Tajrish, Rah-Ahan and Milad. Should Valiasr be a thin reference line in Level 0?
 - 7.4 Level split: L1 = Kordestan, Modares, Sayyad (vertical) + Niayesh, Hemmat, Resalat (horizontal). L2 adds Navvab, Imam Ali, Sadr, Babaei, Zeinoddin, Hakim. L3 = Chamran, Yadegar, Azadegan.
+
+---
+
+## 8. Pass 2 (second round of web searches, English + Persian)
+
+Still **no map and no OSM**. This pass only asked: do two independent pages agree? Most of the Persian sources are Persian-wiki mirrors (`fa.wikifeqh.ir`, `abadis.ir`) and Hamshahri news, again read through search summaries. "Agree" below does **not** mean verified.
+
+**Two sources agree**
+- 0.1 Chamran continues Modares at the Parkway bridge, ends at Tohid Square, and the Tohid Tunnel joins Navvab. (Chamran/Navvab en-wiki + [fa.wikifeqh Parkway](https://fa.wikifeqh.ir/%D9%BE%D8%A7%D8%B1%DA%A9_%D9%88%DB%8C_(%D8%AA%D9%87%D8%B1%D8%A7%D9%86)) + [Wikidata](https://www.wikidata.org/wiki/Q7813271))
+- 0.3 Hemmat's east end is Zeinoddin. (en-wiki + [fa.wikifeqh Hemmat](https://fa.wikifeqh.ir/%D8%A8%D8%B2%D8%B1%DA%AF%D8%B1%D8%A7%D9%87_%D8%B4%D9%87%DB%8C%D8%AF_%D9%87%D9%85%D8%AA_(%D8%AA%D9%87%D8%B1%D8%A7%D9%86)))
+- 1.1 / 4.1 Kordestan runs north–south, from the Kordestan / Shahid Gomnam / Jalal Al-e Ahmad junction up to Niayesh. (en-wiki + [fa.wikifeqh Kordestan](https://fa.wikifeqh.ir/%D8%A8%D8%B2%D8%B1%DA%AF%D8%B1%D8%A7%D9%87_%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86_(%D8%AA%D9%87%D8%B1%D8%A7%D9%86)))
+- 1.13 Yadegar-e Emam: about 6 km west–east from Seoul St, then about 10 km north–south. (en-wiki + [fa.wikifeqh Yadegar](https://fa.wikifeqh.ir/%D8%A8%D8%B2%D8%B1%DA%AF%D8%B1%D8%A7%D9%87_%DB%8C%D8%A7%D8%AF%DA%AF%D8%A7%D8%B1_%D8%A7%D9%85%D8%A7%D9%85_(%D8%AA%D9%87%D8%B1%D8%A7%D9%86)))
+- 2.23 Resalat × Imam Ali (see 2.23).
+- Order along Hemmat, west to east: Ashrafi Esfahani → Yadegar → Milad exit → Sheikh Fazlollah (Hamshahri, [Hemmat exits](https://www.hamshahrionline.ir/news/241794)). Consistent with 3.14.
+
+**Sources conflict**
+- 2.27 Hemmat's west end. en-wiki infobox and fa.wikifeqh say **Kharrazi**. Only the en-wiki text says Azadegan / Tehran–Shomal. Both can be true if Hemmat continues as Kharrazi past that junction. I have no source for that, so it is a guess.
+- 4.4 Yadegar's south end has three answers: Azadi Ave (en text), "U-turn" (en infobox), Hashemi St in the south-west (fa.wikifeqh).
+- Sadr / Babaei / Imam Ali. [abadis](https://abadis.ir/fatofa/%D8%A8%D8%B2%D8%B1%DA%AF%D8%B1%D8%A7%D9%87-%D8%A7%DB%8C%D8%AA-%D8%A7%D9%84%D9%84%D9%87-%D8%B5%D8%AF%D8%B1/) says Sadr's east end is the Imam Ali / Babaei junction. en-wiki says Sadr ends at Pasdaran and becomes Babaei, with Imam Ali further east. The order east of Pasdaran (Sayyad, then Imam Ali) is the same in both. Only where "Sadr" turns into "Babaei" differs. **This changes names on the map, not the layout.**
+- Niayesh and Seoul St. A Hamshahri item mentions a "Seoul–Niayesh interchange" project. That suggests Seoul St meets Niayesh, which would put `n_seoul` on the Niayesh row, not above it. This undermines my guess in 3.13. **Unresolved.**
+
+**Not found**
+- Niayesh's own route (no Persian page came back at all), Hakim's full route, Sayyad Shirazi × Zeinoddin, and any real coordinates for the interchanges.
+
+**New design problem (from the Persian Kordestan page)**
+- Kordestan's links to Hemmat and Hakim are described as **U-turn connections**, not full interchanges. My graph assumes you can turn at every node. If that is wrong, Level 4's Dijkstra will suggest turns you cannot drive. Fix before Phase 4: add a per-node `turns_allowed` (or per-edge `can_transfer`) column.
 
 ---
 

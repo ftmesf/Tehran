@@ -234,7 +234,7 @@
         "wp_hemmat",
         "wp_azadegan"
       ],
-      "note": "CONFLICT: Hemmat infobox says west end is Kharrazi Expwy."
+      "note": "CONFLICT: en-wiki infobox AND fa.wikifeqh say Hemmat ends at Kharrazi Expwy; only the en-wiki text says Azadegan / Tehran-Shomal Fwy. Both could be true if Hemmat continues as Kharrazi past this junction (my guess, no source)."
     },
     {
       "id": "n_hem_yad",
@@ -443,6 +443,22 @@
       "note": ""
     },
     {
+      "id": "n_res_imam",
+      "name_fa": "رسالت × امام علی",
+      "name_en": "Resalat x Imam Ali",
+      "type": "interchange",
+      "lat": null,
+      "lon": null,
+      "x": 1340,
+      "y": 740,
+      "verified": false,
+      "source": [
+        "aaroads_resalat_via_search",
+        "fa_imam_ali_list"
+      ],
+      "note": "Added in pass 2: AARoads Resalat list names Imam Ali, and a Persian summary lists Resalat among Imam Ali crossings. Both are search summaries."
+    },
+    {
       "id": "n_res_e",
       "name_fa": "انتهای شرقی رسالت (یاسینی)",
       "name_en": "Resalat east end (Yasini Expwy)",
@@ -486,7 +502,7 @@
       "source": [
         "wp_yadegar"
       ],
-      "note": "CONFLICT: infobox says the south end is a U-turn.",
+      "note": "CONFLICT: en-wiki text says Azadi Ave, its infobox says U-turn, fa.wikifeqh says Hashemi St in the south-west. Three sources, three answers.",
       "position_confidence": "low"
     },
     {
